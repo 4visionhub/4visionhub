@@ -5,6 +5,7 @@
 
 let activeClient = null;
 let currentLang = 'ua';
+const fixImg = (src) => src ? (src.startsWith('/') || src.startsWith('http') ? src : '/' + src) : '';
 
 // 1. ROUTING & CLIENT CONFIG RESOLUTION
 function resolveActiveClient() {
@@ -83,7 +84,7 @@ function renderClientContent() {
   const cardBadgeText = document.querySelector('[data-i18n="cardBadgeText"]');
 
   if (heroBadgeTag) heroBadgeTag.innerText = activeClient.heroBadgeTag;
-  if (heroShowcaseImg) heroShowcaseImg.src = activeClient.ownerPhoto;
+  if (heroShowcaseImg) heroShowcaseImg.src = fixImg(activeClient.ownerPhoto);
   if (cardBadgeTitle) cardBadgeTitle.innerText = activeClient.cardBadgeTitle;
   if (cardBadgeText) cardBadgeText.innerText = activeClient.cardBadgeText;
 
@@ -195,7 +196,7 @@ function renderClientContent() {
   // About Section
   const aboutImg = document.querySelector('.about-img-src');
   const aboutTitle = document.querySelector('[data-i18n="aboutTitle"]');
-  if (aboutImg) aboutImg.src = activeClient.ownerPhoto;
+  if (aboutImg) aboutImg.src = fixImg(activeClient.ownerPhoto);
   if (aboutTitle) aboutTitle.innerText = activeClient.aboutTitle;
 
   const aboutFeatsContainer = document.querySelector('.about-features-group');
@@ -224,8 +225,8 @@ function renderClientContent() {
       if (currentLang === 'de') lbl = g.labelDE;
       if (currentLang === 'en') lbl = g.labelEN;
       return `
-        <div class="gallery-card-item" onclick="openLightbox('${g.img}', '${lbl}')">
-          <img src="${g.img}" alt="${lbl}">
+        <div class="gallery-card-item" onclick="openLightbox('${fixImg(g.img)}', '${lbl}')">
+          <img src="${fixImg(g.img)}" alt="${lbl}">
           <div class="gallery-card-hover">
             <div class="gallery-card-label">${lbl}</div>
             <span style="font-size:0.8rem; color:#fff;">Click to view</span>
