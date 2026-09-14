@@ -1,222 +1,280 @@
 /* ==========================================================================
-   ALENA ZABOLOTNIA - SWISS LUXURY HAIR ARTIST ENGINE
-   Trilingual Dictionaries: Ukrainian (UA), German (DE), English (EN)
+   MULTI-CLIENT PERSONALIZED DEMO ENGINE
+   Detects /client/:slug and renders custom client branding, colors & data
    ========================================================================== */
 
-const i18nData = {
-  ua: {
-    topTag: "☝️ Тільки ножиці, фен та гребінець",
-    logoSub: "HAIR ARTIST • KANTON BERN 🇨🇭",
-    navHome: "Головна",
-    navServices: "Меню та Ціни",
-    navAbout: "Про Майстра",
-    navGallery: "Галерея",
-    navContact: "Контакти",
-    btnBook: "Записатися",
-    
-    heroBadgeTag: "ALENA ZABOLOTNIA • KANTON BERN 🇨🇭",
-    heroTitle: 'ТОЧНІ СТРИЖКИ <br><span class="hero-gold-text">ВІД МАЙСТРА</span>',
-    heroDesc: "Адаптація за формою обличчя та типом волосся. Філігранна техніка ручної точної стрижки ножицями без машинних шаблонів у кантоні Берн.",
-    btnBookHero: "Записатися Зараз",
-    btnServicesHero: "Прейскурант",
-    
-    cardBadgeTitle: "✂️ Алена Заболотня — Засновниця & Майстер",
-    cardBadgeText: "Точна ручна техніка (ножиці, фен, гребінець) у кантоні Берн.",
-    
-    stat1: "Ручні Ножиці",
-    stat2: "Kanton Bern",
-    stat3: "Персональний Прийом",
-    stat4: "Client Rating",
-    
-    menuTag: "Прейскурант Послуг",
-    menuTitle: "МЕНЮ ТА ВАРТІСТЬ (CHF)",
-    col1Title: "ЖІНОЧІ СТРИЖКИ & ФОРМА",
-    col2Title: "ЧОЛОВІЧІ СТРИЖКИ & ДОГЛЯД",
-    
-    item1Name: "Жіноча Точна Стрижка",
-    item1Sub: "Будь-яка складність • Консультація, миття та укладка феном",
-    item2Name: "Адаптація Текстури & Форми",
-    item2Sub: "Індивідуальна робота зі складним та непокірним волоссям",
-    item3Name: "Чоловіча Стрижка Ножицями",
-    item3Sub: "Виключно ручний зріз ножицями без використання машинок",
-    item4Name: "Фірмова Укладка Феном",
-    item4Sub: "Миття голови, масаж скальпу та об'ємне вкладання феном",
-    btnBookMenu: "Забронювати Час",
-    
-    aboutTag: "Майстерність & Автор",
-    aboutTitle: "АЛЕНА ЗАБОЛОТНЯ",
-    feat1Header: "Тільки Ножиці, Фен та Гребінець",
-    feat1Body: "Бездоганна техніка ручного зрізу для природного падіння пасом.",
-    feat2Header: "Персональна Адаптація",
-    feat2Body: "Адаптую зачіску по формі обличчя та типом волосся для легкої укладки дома.",
-    feat3Header: "Локація у Берні (Schweiz 🇨🇭)",
-    feat3Body: "Затишний індивідуальний прийом у кантоні Берн за попереднім записом.",
-    
-    galTag: "Портфоліо",
-    galTitle: "ГАЛЕРЕЯ РОБІТ",
-    clickExpand: "Натисніть для перегляду",
-    
-    footerLoc: "Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)",
-    btnBookFooter: "Записатися Зараз",
-    
-    modalTitle: "ЗАПИС НА СТРИЖКУ",
-    lblService: "Послуга",
-    lblDate: "Дата",
-    lblTime: "Час",
-    lblName: "Ваше Ім'я",
-    lblPhone: "Телефон / WhatsApp",
-    btnSubmit: "ПІДТВЕРДИТИ ЗАПИС"
-  },
-
-  de: {
-    topTag: "☝️ Nur Schere, Föhn & Kamm",
-    logoSub: "HAIR ARTIST • KANTON BERN 🇨🇭",
-    navHome: "Startseite",
-    navServices: "Preise & Menü",
-    navAbout: "Über Mich",
-    navGallery: "Galerie",
-    navContact: "Kontakt",
-    btnBook: "Termin buchen",
-    
-    heroBadgeTag: "ALENA ZABOLOTNIA • KANTON BERN 🇨🇭",
-    heroTitle: 'PRÄZISIONS <br><span class="hero-gold-text">HAARSCHNITTE</span>',
-    heroDesc: "Anpassung an Kopfform & Haartyp. Exklusive Scheren-Präzisionstechnik ohne Maschinen im Kanton Bern, Schweiz.",
-    btnBookHero: "Jetzt Buchen",
-    btnServicesHero: "Preisliste",
-    
-    cardBadgeTitle: "✂️ Alena Zabolotnia — Inhaberin & Meisterin",
-    cardBadgeText: "Präzisionscut mit Schere, Föhn & Kamm im Kanton Bern.",
-    
-    stat1: "100% Scherenarbeit",
-    stat2: "Kanton Bern",
-    stat3: "1:1 Termine",
-    stat4: "Bewertung",
-    
-    menuTag: "Preisliste",
-    menuTitle: "MENÜ & PREISE (CHF)",
-    col1Title: "DAMEN HAARSCHNITTE",
-    col2Title: "HERREN & PFLEGE",
-    
-    item1Name: "Damen Präzisionscut",
-    item1Sub: "Jede Komplexität • Beratung, Wäsche & Föhn-Styling",
-    item2Name: "Form- & Texturanpassung",
-    item2Sub: "Individuelle Geometrie für anspruchsvolles Haar",
-    item3Name: "Herren Scherenschnitt",
-    item3Sub: "Reiner Haarschnitt mit Schere ohne Maschine",
-    item4Name: "Signature Föhn-Styling",
-    item4Sub: "Haarwäsche, Kopfhautmassage & Föhn-Styling",
-    btnBookMenu: "Termin Vereinbaren",
-    
-    aboutTag: "Handwerk & Inhaberin",
-    aboutTitle: "ALENA ZABOLOTNIA",
-    feat1Header: "Nur Schere, Föhn und Kamm",
-    feat1Body: "Klassische Scherenkunst ohne Maschinenschnitte.",
-    feat2Header: "Individuelle Anpassung",
-    feat2Body: "Perfekter Schnitt für einfache Pflege zu Hause.",
-    feat3Header: "Standort in Bern (Schweiz 🇨🇭)",
-    feat3Body: "Exklusiver Empfang nach Terminvereinbarung.",
-    
-    galTag: "Portfolio",
-    galTitle: "GALERIE",
-    clickExpand: "Klicken zum Vergrößern",
-    
-    footerLoc: "Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)",
-    btnBookFooter: "JETZT TERMIN BUCHEN",
-    
-    modalTitle: "TERMIN BUCHEN",
-    lblService: "Leistung",
-    lblDate: "Datum",
-    lblTime: "Uhrzeit",
-    lblName: "Ihr Name",
-    lblPhone: "Telefon / WhatsApp",
-    btnSubmit: "TERMIN BESTÄTIGEN"
-  },
-
-  en: {
-    topTag: "☝️ Only scissors, hairdryer & comb",
-    logoSub: "HAIR ARTIST • KANTON BERN 🇨🇭",
-    navHome: "Home",
-    navServices: "Menu & Prices",
-    navAbout: "About Master",
-    navGallery: "Gallery",
-    navContact: "Contact",
-    btnBook: "Book Now",
-    
-    heroBadgeTag: "ALENA ZABOLOTNIA • KANTON BERN 🇨🇭",
-    heroTitle: 'PRECISION <br><span class="hero-gold-text">HAND CUTS</span>',
-    heroDesc: "Tailored to your face shape & hair texture. Meticulous hand scissor cuts without machine clippers shortcuts in Kanton Bern, Switzerland.",
-    btnBookHero: "Book Appointment",
-    btnServicesHero: "Price Menu",
-    
-    cardBadgeTitle: "✂️ Alena Zabolotnia — Founder & Master",
-    cardBadgeText: "Precision hand techniques in Kanton Bern, Switzerland.",
-    
-    stat1: "100% Scissors Work",
-    stat2: "Kanton Bern",
-    stat3: "1:1 Personal Visit",
-    stat4: "Rating",
-    
-    menuTag: "Price List",
-    menuTitle: "MENU & PRICES (CHF)",
-    col1Title: "WOMEN'S PRECISION CUTS",
-    col2Title: "MEN'S SCISSORS & CARE",
-    
-    item1Name: "Women's Precision Haircut",
-    item1Sub: "Any complexity • Consultation, wash & blowdry styling",
-    item2Name: "Shape & Texture Adaptation",
-    item2Sub: "Tailored architectural cut for complex hair texture",
-    item3Name: "Men's Scissors Cut",
-    item3Sub: "Exclusively hand-crafted cut without machine buzzers",
-    item4Name: "Signature Blowdry Styling",
-    item4Sub: "Nourishing wash, scalp massage & blowdry volume",
-    btnBookMenu: "Book Time Slot",
-    
-    aboutTag: "Craftsmanship & Founder",
-    aboutTitle: "ALENA ZABOLOTNIA",
-    feat1Header: "Scissors, Hairdryer & Comb Only",
-    feat1Body: "Meticulous technique for natural hair movement.",
-    feat2Header: "Personal Adaptation",
-    feat2Body: "Engineered according to bone structure and hair fall.",
-    feat3Header: "Location in Bern (Schweiz 🇨🇭)",
-    feat3Body: "Private cozy salon by appointment only.",
-    
-    galTag: "Portfolio",
-    galTitle: "WORK SHOWCASE",
-    clickExpand: "Click to expand",
-    
-    footerLoc: "Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)",
-    btnBookFooter: "BOOK NOW",
-    
-    modalTitle: "BOOK APPOINTMENT",
-    lblService: "Service",
-    lblDate: "Date",
-    lblTime: "Time Slot",
-    lblName: "Your Name",
-    lblPhone: "Phone / WhatsApp",
-    btnSubmit: "CONFIRM BOOKING"
-  }
-};
-
+let activeClient = null;
 let currentLang = 'ua';
 
-function setLanguage(lang) {
-  if (!i18nData[lang]) return;
-  currentLang = lang;
-  document.documentElement.lang = lang;
+// 1. ROUTING & CLIENT CONFIG RESOLUTION
+function resolveActiveClient() {
+  const path = window.location.pathname;
+  const match = path.match(/\/client\/([^\/]+)/);
 
-  document.querySelectorAll('.lang-pill-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (i18nData[lang][key]) {
-      el.innerHTML = i18nData[lang][key];
+  if (match && match[1]) {
+    const slug = match[1].toLowerCase();
+    if (window.CLIENTS_DATABASE && window.CLIENTS_DATABASE[slug]) {
+      activeClient = window.CLIENTS_DATABASE[slug];
+    } else {
+      renderClientNotFound(slug);
+      return false;
     }
-  });
+  } else {
+    // Default Root Client
+    activeClient = window.CLIENTS_DATABASE["alena-zabolotnia"];
+  }
+
+  applyClientTheme();
+  return true;
 }
 
+// 2. APPLY DYNAMIC THEME COLORS TO CSS VARIABLES
+function applyClientTheme() {
+  if (!activeClient) return;
+
+  const root = document.documentElement;
+  if (activeClient.accentColor) root.style.setProperty('--accent-gold', activeClient.accentColor);
+  if (activeClient.accentColorLight) root.style.setProperty('--accent-gold-light', activeClient.accentColorLight);
+  if (activeClient.primaryColor) root.style.setProperty('--bg-dark', activeClient.primaryColor);
+
+  document.title = activeClient.titleTag || `${activeClient.businessName} | Luxury Salon`;
+}
+
+// 3. RENDER CLIENT CONTENT BASED ON CURRENT LANGUAGE
+function renderClientContent() {
+  if (!activeClient) return;
+
+  // Header Brand Logo
+  const logoText = document.querySelector('.site-logo-text');
+  const logoTag = document.querySelector('.site-logo-tag');
+  if (logoText) logoText.innerText = activeClient.businessName;
+  if (logoTag) logoTag.innerText = activeClient.logoSub;
+
+  // Top Bar Info
+  const topTag = document.querySelector('[data-i18n="topTag"]');
+  if (topTag) topTag.innerText = activeClient.topTag;
+
+  const topLoc = document.querySelector('.top-bar-left .top-bar-item:first-child');
+  if (topLoc) topLoc.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${activeClient.location}`;
+
+  // Social Header Links
+  const igHeaderLink = document.querySelector('.social-header-link[title="Instagram"]');
+  const threadsHeaderLink = document.querySelector('.social-header-link[title="Threads"]');
+  if (igHeaderLink) igHeaderLink.href = activeClient.instagram;
+  if (threadsHeaderLink) threadsHeaderLink.href = activeClient.threads;
+
+  // Hero Section
+  const heroBadgeTag = document.querySelector('[data-i18n="heroBadgeTag"]');
+  const heroTitle = document.querySelector('[data-i18n="heroTitle"]');
+  const heroDesc = document.querySelector('[data-i18n="heroDesc"]');
+  const heroShowcaseImg = document.querySelector('.hero-showcase-img');
+  const cardBadgeTitle = document.querySelector('[data-i18n="cardBadgeTitle"]');
+  const cardBadgeText = document.querySelector('[data-i18n="cardBadgeText"]');
+
+  if (heroBadgeTag) heroBadgeTag.innerText = activeClient.heroBadgeTag;
+  if (heroShowcaseImg) heroShowcaseImg.src = activeClient.ownerPhoto;
+  if (cardBadgeTitle) cardBadgeTitle.innerText = activeClient.cardBadgeTitle;
+  if (cardBadgeText) cardBadgeText.innerText = activeClient.cardBadgeText;
+
+  if (currentLang === 'de') {
+    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleDE;
+    if (heroDesc) heroDesc.innerText = activeClient.heroDescDE;
+  } else if (currentLang === 'en') {
+    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleEN;
+    if (heroDesc) heroDesc.innerText = activeClient.heroDescEN;
+  } else {
+    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleUA;
+    if (heroDesc) heroDesc.innerText = activeClient.heroDescUA;
+  }
+
+  // Stats Strip
+  const statsContainer = document.querySelector('.stats-grid-row');
+  if (statsContainer && activeClient.stats) {
+    statsContainer.innerHTML = activeClient.stats.map(st => {
+      let lbl = st.labelUA;
+      if (currentLang === 'de') lbl = st.labelDE;
+      if (currentLang === 'en') lbl = st.labelEN;
+      return `
+        <div>
+          <div class="stat-value-num">${st.num}</div>
+          <div class="stat-desc-lbl">${lbl}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Price List Menu
+  if (activeClient.services) {
+    const col1Title = document.querySelector('[data-i18n="col1Title"]');
+    const col2Title = document.querySelector('[data-i18n="col2Title"]');
+
+    if (col1Title) {
+      let c1 = activeClient.services.col1TitleUA;
+      if (currentLang === 'de') c1 = activeClient.services.col1TitleDE;
+      if (currentLang === 'en') c1 = activeClient.services.col1TitleEN;
+      col1Title.innerText = c1;
+    }
+
+    if (col2Title) {
+      let c2 = activeClient.services.col2TitleUA;
+      if (currentLang === 'de') c2 = activeClient.services.col2TitleDE;
+      if (currentLang === 'en') c2 = activeClient.services.col2TitleEN;
+      col2Title.innerText = c2;
+    }
+
+    // Populate Column 1 Items
+    const col1Container = document.querySelector('.menu-columns-grid > div:first-child');
+    if (col1Container) {
+      const headerHtml = col1Container.querySelector('.menu-cat-title').outerHTML;
+      const itemsHtml = activeClient.services.col1Items.map(it => {
+        let name = it.nameUA;
+        let sub = it.subUA;
+        if (currentLang === 'de') { name = it.nameDE; sub = it.subDE; }
+        if (currentLang === 'en') { name = it.nameEN; sub = it.subEN; }
+        return `
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name">${name}</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">${it.price}</span>
+            </div>
+            <div class="menu-item-details">${sub}</div>
+          </div>
+        `;
+      }).join('');
+      col1Container.innerHTML = headerHtml + itemsHtml;
+    }
+
+    // Populate Column 2 Items
+    const col2Container = document.querySelector('.menu-columns-grid > div:last-child');
+    if (col2Container) {
+      const headerHtml = col2Container.querySelector('.menu-cat-title').outerHTML;
+      const itemsHtml = activeClient.services.col2Items.map(it => {
+        let name = it.nameUA;
+        let sub = it.subUA;
+        if (currentLang === 'de') { name = it.nameDE; sub = it.subDE; }
+        if (currentLang === 'en') { name = it.nameEN; sub = it.subEN; }
+        return `
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name">${name}</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">${it.price}</span>
+            </div>
+            <div class="menu-item-details">${sub}</div>
+          </div>
+        `;
+      }).join('');
+      col2Container.innerHTML = headerHtml + itemsHtml;
+    }
+
+    // Modal Service Select Options
+    const modalSelect = document.getElementById('modalServiceSelect');
+    if (modalSelect) {
+      const allServices = [...activeClient.services.col1Items, ...activeClient.services.col2Items];
+      modalSelect.innerHTML = allServices.map(it => {
+        let name = it.nameUA;
+        if (currentLang === 'de') name = it.nameDE;
+        if (currentLang === 'en') name = it.nameEN;
+        return `<option value="${name}">${name} — ${it.price}</option>`;
+      }).join('');
+    }
+  }
+
+  // About Section
+  const aboutImg = document.querySelector('.about-img-src');
+  const aboutTitle = document.querySelector('[data-i18n="aboutTitle"]');
+  if (aboutImg) aboutImg.src = activeClient.ownerPhoto;
+  if (aboutTitle) aboutTitle.innerText = activeClient.aboutTitle;
+
+  const aboutFeatsContainer = document.querySelector('.about-features-group');
+  if (aboutFeatsContainer && activeClient.aboutFeats) {
+    aboutFeatsContainer.innerHTML = activeClient.aboutFeats.map(af => {
+      let t = af.titleUA; let d = af.descUA;
+      if (currentLang === 'de') { t = af.titleDE; d = af.descDE; }
+      if (currentLang === 'en') { t = af.titleEN; d = af.descEN; }
+      return `
+        <div class="about-feat-item">
+          <div class="about-feat-icon"><i class="fa-solid ${af.icon}"></i></div>
+          <div>
+            <h3 class="about-feat-title">${t}</h3>
+            <p class="about-feat-desc">${d}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Gallery Cards
+  const galleryGrid = document.querySelector('.gallery-cards-grid');
+  if (galleryGrid && activeClient.gallery) {
+    galleryGrid.innerHTML = activeClient.gallery.map(g => {
+      let lbl = g.labelUA;
+      if (currentLang === 'de') lbl = g.labelDE;
+      if (currentLang === 'en') lbl = g.labelEN;
+      return `
+        <div class="gallery-card-item" onclick="openLightbox('${g.img}', '${lbl}')">
+          <img src="${g.img}" alt="${lbl}">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">${lbl}</div>
+            <span style="font-size:0.8rem; color:#fff;">Click to view</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Footer
+  const footerTitle = document.querySelector('.footer-logo-title');
+  const footerLoc = document.querySelector('[data-i18n="footerLoc"]');
+  const footerIgBtn = document.querySelector('.footer-social-btn[href*="instagram"]');
+  const footerThreadsBtn = document.querySelector('.footer-social-btn[href*="threads"]');
+
+  if (footerTitle) footerTitle.innerText = activeClient.businessName;
+  if (footerLoc) footerLoc.innerText = `${activeClient.logoSub}`;
+  if (footerIgBtn) footerIgBtn.href = activeClient.instagram;
+  if (footerThreadsBtn) footerThreadsBtn.href = activeClient.threads;
+
+  const copyright = document.querySelector('.footer-copyright');
+  if (copyright) copyright.innerHTML = `&copy; 2026 ${activeClient.businessName}. All rights reserved.`;
+}
+
+// 4. RENDER "DEMO NOT FOUND" PAGE FOR UNKNOWN SLUGS
+function renderClientNotFound(slug) {
+  document.body.innerHTML = `
+    <div style="min-height:100vh; background:#07080a; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2rem; text-align:center; font-family:'Plus Jakarta Sans', sans-serif;">
+      <div style="width:70px; height:70px; border-radius:50%; background:rgba(212,175,55,0.1); border:1px solid #d4af37; display:flex; align-items:center; justify-content:center; font-size:2rem; color:#d4af37; margin-bottom:1.5rem;">
+        <i class="fa-solid fa-store-slash"></i>
+      </div>
+      <h1 style="font-family:'Cinzel', serif; font-size:2.5rem; color:#d4af37; margin-bottom:0.5rem;">Demo Client Not Found</h1>
+      <p style="color:#9ba2b0; max-width:480px; margin-bottom:2rem; font-size:1rem;">
+        The requested demo client "<strong>${slug}</strong>" does not exist or has been removed.
+      </p>
+      
+      <div style="background:#13161f; border:1px solid rgba(212,175,55,0.3); border-radius:8px; padding:1.5rem; max-width:450px; width:100%; margin-bottom:2rem;">
+        <h3 style="font-size:0.9rem; text-transform:uppercase; letter-spacing:2px; color:#d4af37; margin-bottom:1rem;">Available Client Demos:</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+          <li><a href="/client/alena-zabolotnia" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✂️ Alena Zabolotnia (Kanton Bern)</a></li>
+          <li><a href="/client/alexander-rein" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✨ Alexander Rein (Baden / Zürich)</a></li>
+          <li><a href="/client/glow-salon" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">🌟 Glow Beauty Salon (Zürich)</a></li>
+        </ul>
+      </div>
+
+      <a href="/" style="padding:0.8rem 2rem; background:#d4af37; color:#000; font-family:'Cinzel', serif; font-weight:700; text-decoration:none; letter-spacing:1.5px; border-radius:2px;">
+        RETURN TO DEFAULT DEMO
+      </a>
+    </div>
+  `;
+}
+
+// 5. INITIALIZATION & LISTENERS
 document.addEventListener('DOMContentLoaded', () => {
+  const isResolved = resolveActiveClient();
+  if (!isResolved) return;
+
+  renderClientContent();
+
+  // Mobile Nav Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navMenu = document.getElementById('navMenu');
 
@@ -232,12 +290,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Language Pill Handlers
   document.querySelectorAll('.lang-pill-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      setLanguage(btn.getAttribute('data-lang'));
+      currentLang = btn.getAttribute('data-lang');
+      document.querySelectorAll('.lang-pill-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
+      });
+      renderClientContent();
     });
   });
 
+  // Default Date setup
   const dateInput = document.getElementById('modalDate');
   if (dateInput) {
     const tomorrow = new Date();
@@ -247,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Lightbox & Modal Functions
 function openLightbox(imgSrc, caption) {
   const modal = document.getElementById('lightboxModal');
   const img = document.getElementById('lightboxImg');
@@ -280,12 +345,12 @@ function handleBookingSubmit(event) {
   const name = document.getElementById('modalName').value;
   const phone = document.getElementById('modalPhone').value;
 
-  const textMsg = `Hello Alena! ✂️\n\nI would like to book a haircut appointment:\n` +
+  const textMsg = `Hello ${activeClient ? activeClient.ownerName : 'Master'}! ✂️\n\nI would like to book a appointment:\n` +
                   `👤 Name: ${name}\n` +
                   `💇 Service: ${service}\n` +
                   `📅 Date & Time: ${date} at ${time}\n` +
                   `📱 Phone: ${phone}\n` +
-                  `\nLocation: Kanton Bern, Schweiz 🇨🇭`;
+                  `\nLocation: ${activeClient ? activeClient.address : 'Schweiz 🇨🇭'}`;
 
   const waUrl = `https://wa.me/?text=${encodeURIComponent(textMsg)}`;
   closeBookingModal();
