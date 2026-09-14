@@ -1,0 +1,10 @@
+{
+  "name": "alena-zabolotnia-hair-artist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Alena Zabolotnia - Luxury Hair Artist Website (Kanton Bern, Switzerland)",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site ready for deployment'"
+  }
+}

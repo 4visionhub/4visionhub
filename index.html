@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALENA ZABOLOTNIA | Hair Artist • Kanton Bern 🇨🇭</title>
+  <meta name="description" content="ALENA ZABOLOTNIA - High Precision Scissor Haircuts & Styling in Kanton Bern, Switzerland.">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- FIXED CONSTANT TOP HEADER CONTAINER (ZERO HEIGHT SHIFTING) -->
+  <div class="header-fixed-container">
+    <!-- Top Info Bar (38px height) -->
+    <div class="top-info-bar">
+      <div class="container top-bar-content">
+        <div class="top-bar-left">
+          <span class="top-bar-item">
+            <i class="fa-solid fa-location-dot"></i> Schweiz 🇨🇭 (Kanton Bern)
+          </span>
+          <span class="top-bar-item">
+            <i class="fa-solid fa-scissors"></i> <span data-i18n="topTag">☝️ Тільки ножиці, фен та гребінець</span>
+          </span>
+        </div>
+
+        <div class="top-bar-right">
+          <a href="https://www.instagram.com/alena.zabolotniaia/" target="_blank" class="social-header-link" title="Instagram">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.threads.net/@alena.zabolotniaia" target="_blank" class="social-header-link" title="Threads">
+            <i class="fa-solid fa-at"></i> Threads
+          </a>
+          <!-- Language Switcher Pills -->
+          <div class="lang-switcher-pill">
+            <button class="lang-pill-btn active" data-lang="ua">UA</button>
+            <button class="lang-pill-btn" data-lang="de">DE</button>
+            <button class="lang-pill-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar (75px CONSTANT height) -->
+    <header class="main-nav-bar">
+      <div class="container main-nav-wrapper">
+        <a href="#" class="site-logo">
+          <span class="site-logo-text">ALENA ZABOLOTNIA</span>
+          <span class="site-logo-tag" data-i18n="logoSub">HAIR ARTIST • KANTON BERN 🇨🇭</span>
+        </a>
+
+        <nav class="nav-links-menu" id="navMenu">
+          <a href="#home" class="nav-item-link active" data-i18n="navHome">Головна</a>
+          <a href="#services" class="nav-item-link" data-i18n="navServices">Меню та Ціни</a>
+          <a href="#about" class="nav-item-link" data-i18n="navAbout">Про Майстра</a>
+          <a href="#gallery" class="nav-item-link" data-i18n="navGallery">Галерея</a>
+          <a href="#contact" class="nav-item-link" data-i18n="navContact">Контакти</a>
+        </nav>
+
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <button class="btn-header-cta" onclick="openBookingModal()" data-i18n="btnBook">
+            <i class="fa-solid fa-calendar-check"></i> Записатися
+          </button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ENTRANCE HERO SECTION -->
+  <section class="entrance-hero" id="home">
+    <div class="container">
+      <div class="hero-split-grid">
+        <!-- Left Content -->
+        <div class="hero-left-content">
+          <div class="hero-brand-badge">
+            <i class="fa-solid fa-scissors"></i>
+            <span data-i18n="heroBadgeTag">ALENA ZABOLOTNIA • KANTON BERN 🇨🇭</span>
+          </div>
+
+          <h1 class="hero-entrance-title" data-i18n="heroTitle">
+            ТОЧНІ СТРИЖКИ <br>
+            <span class="hero-gold-text">ВІД МАЙСТРА</span>
+          </h1>
+
+          <p class="hero-entrance-desc" data-i18n="heroDesc">
+            Адаптація за формою обличчя та типом волосся. Філігранна техніка ручної точної стрижки ножицями без машинних шаблонів у кантоні Берн.
+          </p>
+
+          <div class="hero-cta-buttons">
+            <button class="btn-hero-primary" onclick="openBookingModal()" data-i18n="btnBookHero">
+              <i class="fa-solid fa-calendar-days"></i> Записатися Зараз
+            </button>
+            <a href="#services" class="btn-hero-secondary" data-i18n="btnServicesHero">
+              <i class="fa-solid fa-list-check"></i> Прейскурант
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Showcase Card (Owner Alena Zabolotnia Photo) -->
+        <div class="hero-visual-card">
+          <img src="assets/owner_alena.jpg" alt="Alena Zabolotnia Master Hair Stylist" class="hero-showcase-img">
+          <div class="hero-card-badge">
+            <div class="hero-card-badge-title" data-i18n="cardBadgeTitle">✂️ Алена Заболотня — Засновниця & Майстер</div>
+            <div class="hero-card-badge-text" data-i18n="cardBadgeText">Точна ручна техніка (ножиці, фен, гребінець) у кантоні Берн.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid-row">
+        <div>
+          <div class="stat-value-num">100%</div>
+          <div class="stat-desc-lbl" data-i18n="stat1">Ручні Ножиці</div>
+        </div>
+        <div>
+          <div class="stat-value-num">🇨🇭 Bern</div>
+          <div class="stat-desc-lbl" data-i18n="stat2">Kanton Bern</div>
+        </div>
+        <div>
+          <div class="stat-value-num">1:1</div>
+          <div class="stat-desc-lbl" data-i18n="stat3">Персональний Прийом</div>
+        </div>
+        <div>
+          <div class="stat-value-num">5.0 ★</div>
+          <div class="stat-desc-lbl" data-i18n="stat4">Client Rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONELINE PRICE MENU SECTION -->
+  <section class="menu-section" id="services">
+    <div class="container">
+      <div class="section-head-box">
+        <span class="head-subtitle" data-i18n="menuTag">Прейскурант Послуг</span>
+        <h2 class="head-title" data-i18n="menuTitle">МЕНЮ ТА ВАРТІСТЬ (CHF)</h2>
+        <div class="head-divider">
+          <div class="divider-line"></div>
+          <i class="fa-solid fa-scissors divider-icon"></i>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+
+      <div class="menu-columns-grid">
+        <!-- Women's Column -->
+        <div>
+          <div class="menu-cat-title">
+            <i class="fa-solid fa-venus"></i> <span data-i18n="col1Title">ЖІНОЧІ СТРИЖКИ & ФОРМА</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name" data-i18n="item1Name">Жіноча Точна Стрижка</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">CHF 95</span>
+            </div>
+            <div class="menu-item-details" data-i18n="item1Sub">Будь-яка складність • Консультація, миття та укладка феном</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name" data-i18n="item2Name">Адаптація Текстури & Форми</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">CHF 110</span>
+            </div>
+            <div class="menu-item-details" data-i18n="item2Sub">Індивідуальна робота зі складним та непокірним волоссям</div>
+          </div>
+        </div>
+
+        <!-- Men's Column -->
+        <div>
+          <div class="menu-cat-title">
+            <i class="fa-solid fa-mars"></i> <span data-i18n="col2Title">ЧОЛОВІЧІ СТРИЖКИ & ДОГЛЯД</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name" data-i18n="item3Name">Чоловіча Стрижка Ножицями</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">CHF 65</span>
+            </div>
+            <div class="menu-item-details" data-i18n="item3Sub">Виключно ручний зріз ножицями без використання машинок</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="menu-item-top">
+              <span class="menu-item-name" data-i18n="item4Name">Фірмова Укладка Феном</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">CHF 55</span>
+            </div>
+            <div class="menu-item-details" data-i18n="item4Sub">Миття голови, масаж скальпу та об'ємне вкладання феном</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <button class="btn-hero-primary" onclick="openBookingModal()" data-i18n="btnBookMenu">
+          <i class="fa-solid fa-calendar-check"></i> Забронювати Час
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / CRAFT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-columns">
+        <div class="about-image-card">
+          <img src="assets/owner_alena.jpg" alt="Alena Zabolotnia Owner & Master Stylist" class="about-img-src">
+        </div>
+
+        <div>
+          <span class="head-subtitle" style="text-align:left;" data-i18n="aboutTag">Майстерність & Автор</span>
+          <h2 class="head-title" style="text-align:left; font-size:2.2rem;" data-i18n="aboutTitle">
+            АЛЕНА ЗАБОЛОТНЯ
+          </h2>
+
+          <div class="about-features-group">
+            <div class="about-feat-item">
+              <div class="about-feat-icon"><i class="fa-solid fa-scissors"></i></div>
+              <div>
+                <h3 class="about-feat-title" data-i18n="feat1Header">Тільки Ножиці, Фен та Гребінець</h3>
+                <p class="about-feat-desc" data-i18n="feat1Body">Бездоганна техніка ручного зрізу для природного падіння пасом.</p>
+              </div>
+            </div>
+
+            <div class="about-feat-item">
+              <div class="about-feat-icon"><i class="fa-solid fa-sliders"></i></div>
+              <div>
+                <h3 class="about-feat-title" data-i18n="feat2Header">Персональна Адаптація</h3>
+                <p class="about-feat-desc" data-i18n="feat2Body">Адаптую зачіску по формі обличчя та типом волосся для легкої укладки дома.</p>
+              </div>
+            </div>
+
+            <div class="about-feat-item">
+              <div class="about-feat-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h3 class="about-feat-title" data-i18n="feat3Header">Локація у Берні (Schweiz 🇨🇭)</h3>
+                <p class="about-feat-desc" data-i18n="feat3Body">Затишний індивідуальний прийом у кантоні Берн за попереднім записом.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="https://www.instagram.com/alena.zabolotniaia/" target="_blank" class="btn-hero-secondary">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.threads.net/@alena.zabolotniaia" target="_blank" class="btn-hero-secondary">
+              <i class="fa-solid fa-at"></i> Threads
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head-box">
+        <span class="head-subtitle" data-i18n="galTag">Портфоліо</span>
+        <h2 class="head-title" data-i18n="galTitle">ГАЛЕРЕЯ РОБІТ</h2>
+        <div class="head-divider">
+          <div class="divider-line"></div>
+          <i class="fa-solid fa-camera divider-icon"></i>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+
+      <div class="gallery-cards-grid">
+        <div class="gallery-card-item" onclick="openLightbox('assets/gallery_women.jpg', 'Точний жіночий Боб')">
+          <img src="assets/gallery_women.jpg" alt="Women Bob">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">Жіночий Боб</div>
+            <span style="font-size:0.8rem; color:#fff;" data-i18n="clickExpand">Натисніть для перегляду</span>
+          </div>
+        </div>
+
+        <div class="gallery-card-item" onclick="openLightbox('assets/gallery_men.jpg', 'Чоловіча стрижка ножицями')">
+          <img src="assets/gallery_men.jpg" alt="Men Scissor Cut">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">Чоловічі Ножиці</div>
+            <span style="font-size:0.8rem; color:#fff;" data-i18n="clickExpand">Натисніть для перегляду</span>
+          </div>
+        </div>
+
+        <div class="gallery-card-item" onclick="openLightbox('assets/owner_alena.jpg', 'Алена Заболотня — Майстер стрижок')">
+          <img src="assets/owner_alena.jpg" alt="Alena Zabolotnia">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">Майстер Алена</div>
+            <span style="font-size:0.8rem; color:#fff;" data-i18n="clickExpand">Натисніть для перегляду</span>
+          </div>
+        </div>
+
+        <div class="gallery-card-item" onclick="openLightbox('assets/hero_bg.jpg', 'Атмосфера майстерні у Берні')">
+          <img src="assets/hero_bg.jpg" alt="Salon Interior">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">Студія у Берні</div>
+            <span style="font-size:0.8rem; color:#fff;" data-i18n="clickExpand">Натисніть для перегляду</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+    <img src="" id="lightboxImg" alt="Full view">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-logo-title">ALENA ZABOLOTNIA</div>
+      <p style="color:var(--text-muted); font-size:0.85rem;" data-i18n="footerLoc">
+        Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)
+      </p>
+
+      <div class="footer-social-group">
+        <a href="https://www.instagram.com/alena.zabolotniaia/" target="_blank" class="footer-social-btn">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.threads.net/@alena.zabolotniaia" target="_blank" class="footer-social-btn">
+          <i class="fa-solid fa-at"></i> Threads
+        </a>
+      </div>
+
+      <div style="margin-top:1.2rem;">
+        <button class="btn-hero-primary" onclick="openBookingModal()" data-i18n="btnBookFooter">
+          <i class="fa-solid fa-calendar-check"></i> Записатися Зараз
+        </button>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Alena Zabolotnia. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-wrapper-overlay" id="bookingModal">
+    <div class="modal-content-card">
+      <button style="position:absolute; top:15px; right:20px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;" onclick="closeBookingModal()">&times;</button>
+      
+      <div class="modal-title-head" data-i18n="modalTitle">ЗАПИС НА СТРИЖКУ</div>
+
+      <form onsubmit="handleBookingSubmit(event)">
+        <div class="form-group-field">
+          <label data-i18n="lblService">Послуга</label>
+          <select class="form-field-input" id="modalServiceSelect">
+            <option value="Жіноча Точна Стрижка">Жіноча Точна Стрижка — CHF 95</option>
+            <option value="Чоловіча Стрижка Ножицями">Чоловіча Стрижка Ножицями — CHF 65</option>
+            <option value="Адаптація Текстури & Форми">Адаптація Текстури & Форми — CHF 110</option>
+            <option value="Фірмова Укладка Феном">Фірмова Укладка Феном — CHF 55</option>
+          </select>
+        </div>
+
+        <div class="form-flex-row">
+          <div class="form-group-field">
+            <label data-i18n="lblDate">Дата</label>
+            <input type="date" class="form-field-input" id="modalDate" required>
+          </div>
+          <div class="form-group-field">
+            <label data-i18n="lblTime">Час</label>
+            <select class="form-field-input" id="modalTime">
+              <option value="10:00">10:00</option>
+              <option value="12:00">12:00</option>
+              <option value="14:30">14:30</option>
+              <option value="16:30">16:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group-field">
+          <label data-i18n="lblName">Ваше Ім'я</label>
+          <input type="text" class="form-field-input" id="modalName" placeholder="Олена" required>
+        </div>
+
+        <div class="form-group-field">
+          <label data-i18n="lblPhone">Телефон / WhatsApp</label>
+          <input type="tel" class="form-field-input" id="modalPhone" placeholder="+41 79 000 00 00" required>
+        </div>
+
+        <button type="submit" class="btn-hero-primary" style="width:100%; margin-top:1rem;" data-i18n="btnSubmit">
+          <i class="fa-solid fa-calendar-check"></i> ПІДТВЕРДИТИ ЗАПИС
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
