@@ -212,7 +212,7 @@ window.CLIENTS_DATABASE = {
     primaryColor: "#050505",
     accentColor: "#a37c4d",
     accentColorLight: "#cbb493",
-    ownerPhoto: "assets/owner_alexander.jpg",
+    ownerPhoto: "assets/alexendrian_owner.png",
     heroBg: "assets/hero_bg.jpg",
     heroBadgeTag: "4VISIONHUB • ZÜRICH 🇨🇭",
     heroTitleUA: "PREMIUM <br><span class=\"hero-gold-text\">HAIRCUT & STYLING</span>",
