@@ -7,6 +7,48 @@ let activeClient = null;
 let currentLang = 'ua';
 const fixImg = (src) => src ? (src.startsWith('/') || src.startsWith('http') ? src : '/' + src) : '';
 
+const uiTranslations = {
+  ua: {
+    navHome: "Головна", navServices: "Меню та Ціни", navAbout: "Про Майстра", navGallery: "Галерея", navContact: "Контакти",
+    btnBook: "Записатися", btnBookHero: "Записатися Зараз", btnServicesHero: "Прейскурант",
+    stat1: "Ручні Ножиці", stat2: "Kanton Bern", stat3: "Персональний Прийом", stat4: "Client Rating",
+    menuTag: "Прейскурант Послуг", menuTitle: "МЕНЮ ТА ВАРТІСТЬ (CHF)", btnBookMenu: "Забронювати Час",
+    galTag: "Портфоліо", galTitle: "ГАЛЕРЕЯ РОБІТ", clickExpand: "Натисніть для перегляду",
+    footerLoc: "Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)", btnBookFooter: "Записатися Зараз",
+    modalTitle: "ЗАПИС НА СТРИЖКУ", lblService: "Послуга", lblDate: "Дата", lblTime: "Час",
+    lblName: "Ваше Ім'я", lblPhone: "Телефон / WhatsApp", btnSubmit: "ПІДТВЕРДИТИ ЗАПИС"
+  },
+  de: {
+    navHome: "Startseite", navServices: "Preise", navAbout: "Über uns", navGallery: "Galerie", navContact: "Kontakt",
+    btnBook: "Termin", btnBookHero: "Jetzt Buchen", btnServicesHero: "Preisliste",
+    stat1: "Handarbeit", stat2: "Kanton Bern", stat3: "Termine", stat4: "Kunden",
+    menuTag: "Preisliste", menuTitle: "MENÜ & PREISE (CHF)", btnBookMenu: "Termin buchen",
+    galTag: "Portfolio", galTitle: "GALERIE", clickExpand: "Klicken zum Vergrößern",
+    footerLoc: "Hair Artist • Schweiz 🇨🇭", btnBookFooter: "Jetzt Buchen",
+    modalTitle: "TERMIN BUCHEN", lblService: "Service", lblDate: "Datum", lblTime: "Zeit",
+    lblName: "Ihr Name", lblPhone: "Telefon / WhatsApp", btnSubmit: "BESTÄTIGEN"
+  },
+  en: {
+    navHome: "Home", navServices: "Prices", navAbout: "About", navGallery: "Gallery", navContact: "Contact",
+    btnBook: "Book", btnBookHero: "Book Now", btnServicesHero: "Price List",
+    stat1: "Handcrafted", stat2: "Canton Bern", stat3: "Appointments", stat4: "Clients",
+    menuTag: "Price List", menuTitle: "MENU & PRICES (CHF)", btnBookMenu: "Book Appointment",
+    galTag: "Portfolio", galTitle: "GALLERY", clickExpand: "Click to view",
+    footerLoc: "Hair Artist • Switzerland 🇨🇭", btnBookFooter: "Book Now",
+    modalTitle: "BOOK APPOINTMENT", lblService: "Service", lblDate: "Date", lblTime: "Time",
+    lblName: "Your Name", lblPhone: "Phone / WhatsApp", btnSubmit: "CONFIRM"
+  }
+};
+
+function applyStaticTranslations() {
+  const dict = uiTranslations[currentLang];
+  if (!dict) return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.innerText = dict[key];
+  });
+}
+
 // 1. ROUTING & CLIENT CONFIG RESOLUTION
 function resolveActiveClient() {
   const path = window.location.pathname;
@@ -285,6 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!isResolved) return;
 
   renderClientContent();
+  applyStaticTranslations();
 
   // Mobile Nav Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -310,6 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
         b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
       });
       renderClientContent();
+      applyStaticTranslations();
     });
   });
 
