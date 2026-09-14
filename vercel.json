@@ -3,7 +3,7 @@
   "cleanUrls": true,
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/client/(.*)", "destination": "/index.html" }
+    { "source": "/client/:slug", "destination": "/index.html" }
   ],
   "headers": [
     {
