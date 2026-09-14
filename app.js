@@ -4,7 +4,7 @@
    ========================================================================== */
 
 let activeClient = null;
-let currentLang = 'ua';
+let currentLang = 'en';
 const fixImg = (src) => src ? (src.startsWith('/') || src.startsWith('http') ? src : '/' + src) : '';
 
 const uiTranslations = {
