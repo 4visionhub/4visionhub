@@ -194,5 +194,64 @@ window.CLIENTS_DATABASE = {
       { img: "assets/craft_scissors.jpg", labelUA: "Craft Details", labelDE: "Handwerk", labelEN: "Craft Details" },
       { img: "assets/gallery_men.jpg", labelUA: "Men Style", labelDE: "Herren Style", labelEN: "Men's Styling" }
     ]
+  },
+
+  "alexendrian": {
+    slug: "alexendrian",
+    businessName: "4VISIONHUB",
+    ownerName: "Alexander",
+    titleTag: "4VISIONHUB | Premium Salon • Zürich 🇨🇭",
+    logoSub: "PREMIUM HAIR SALON • ZÜRICH 🇨🇭",
+    topTag: "✨ Expert Haircuts & Styling",
+    location: "Zürich, Schweiz",
+    address: "Zürich, Schweiz",
+    phone: "+41 79 000 00 00",
+    instagram: "https://www.instagram.com/",
+    instagramHandle: "@4visionhub",
+    threads: "https://www.threads.net/",
+    primaryColor: "#050505",
+    accentColor: "#a37c4d",
+    accentColorLight: "#cbb493",
+    ownerPhoto: "assets/owner_alexander.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "4VISIONHUB • ZÜRICH 🇨🇭",
+    heroTitleUA: "PREMIUM <br><span class=\"hero-gold-text\">HAIRCUT & STYLING</span>",
+    heroDescUA: "Ексклюзивний сервіс та індивідуальний підхід для кожного клієнта.",
+    heroTitleDE: "PREMIUM <br><span class=\"hero-gold-text\">HAIRCUT & STYLING</span>",
+    heroDescDE: "Exklusiver Service und individuelle Betreuung für jeden Kunden.",
+    heroTitleEN: "PREMIUM <br><span class=\"hero-gold-text\">HAIRCUT & STYLING</span>",
+    heroDescEN: "Exclusive service and individual approach for every client.",
+    cardBadgeTitle: "✨ 4VisionHub Studio",
+    cardBadgeText: "Premium salon experience in Zürich.",
+    stats: [
+      { num: "Zürich", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Expert", labelUA: "Майстри", labelDE: "Experten", labelEN: "Experts" },
+      { num: "Premium", labelUA: "Продукти", labelDE: "Produkte", labelEN: "Products" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "СТРИЖКИ",
+      col1TitleDE: "HAARSCHNITTE",
+      col1TitleEN: "HAIRCUTS",
+      col1Items: [
+        { nameUA: "Premium Стрижка", nameDE: "Premium Haarschnitt", nameEN: "Premium Haircut", price: "CHF 120", subUA: "Авторська стрижка та укладка", subDE: "Exklusiver Schnitt und Styling", subEN: "Signature cut and styling" }
+      ],
+      col2TitleUA: "ДОГЛЯД",
+      col2TitleDE: "PFLEGE",
+      col2TitleEN: "CARE",
+      col2Items: [
+        { nameUA: "Відновлення Волосся", nameDE: "Haarwiederherstellung", nameEN: "Hair Restoration", price: "CHF 90", subUA: "Глибокий SPA догляд", subDE: "Tiefenwirksame SPA Pflege", subEN: "Deep SPA hair care" }
+      ]
+    },
+    aboutTag: "Про Нас",
+    aboutTitle: "4VISIONHUB",
+    aboutFeats: [
+      { icon: "fa-star", titleUA: "Висока Якість", titleDE: "Hohe Qualität", titleEN: "High Quality", descUA: "Безкомпромісний рівень сервісу.", descDE: "Kompromissloses Serviceniveau.", descEN: "Uncompromising level of service." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelUA: "Стиль", labelDE: "Stil", labelEN: "Style" },
+      { img: "assets/hero_bg.jpg", labelUA: "Атмосфера", labelDE: "Atmosphäre", labelEN: "Atmosphere" },
+      { img: "assets/gallery_men.jpg", labelUA: "Чоловічий Стиль", labelDE: "Herren Stil", labelEN: "Men's Style" }
+    ]
   }
 };
