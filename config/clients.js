@@ -10,7 +10,7 @@ window.CLIENTS_DATABASE = {
     ownerName: "Алена Заболотня",
     titleTag: "ALENA ZABOLOTNIA | Hair Artist • Kanton Bern 🇨🇭",
     logoSub: "HAIR ARTIST • KANTON BERN 🇨🇭",
-    topTag: "☝️ Тільки ножиці, фен та гребінець",
+    topTag: "☝️ Scissors, hair dryer and comb only",
     location: "Schweiz 🇨🇭 (Kanton Bern)",
     address: "Kanton Bern, Schweiz",
     phone: "+41 79 000 00 00",
@@ -29,8 +29,8 @@ window.CLIENTS_DATABASE = {
     heroDescDE: "Anpassung an Kopfform & Haartyp. Exklusive Scheren-Präzisionstechnik ohne Maschinen im Kanton Bern, Schweiz.",
     heroTitleEN: "PRECISION <br><span class=\"hero-gold-text\">HAND CUTS</span>",
     heroDescEN: "Tailored to your face shape & hair texture. Meticulous hand scissor cuts without machine clippers shortcuts in Kanton Bern, Switzerland.",
-    cardBadgeTitle: "✂️ Алена Заболотня — Засновниця & Майстер",
-    cardBadgeText: "Точна ручна техніка (ножиці, фен, гребінець) у кантоні Берн.",
+    cardBadgeTitle: "✂️ Alena Zabolotnia — Founder & Master",
+    cardBadgeText: "Precision hand technique (scissors, dryer, comb) in Kanton Bern.",
     stats: [
       { num: "100%", labelUA: "Ручні Ножиці", labelDE: "100% Scherenarbeit", labelEN: "100% Scissors Work" },
       { num: "🇨🇭 Bern", labelUA: "Kanton Bern", labelDE: "Kanton Bern", labelEN: "Kanton Bern" },
@@ -53,8 +53,8 @@ window.CLIENTS_DATABASE = {
         { nameUA: "Фірмова Укладка Феном", nameDE: "Signature Föhn-Styling", nameEN: "Signature Blowdry Styling", price: "CHF 55", subUA: "Миття голови, масаж скальпу та укладка", subDE: "Haarwäsche, Kopfhautmassage & Föhn-Styling", subEN: "Nourishing wash, scalp massage & volume" }
       ]
     },
-    aboutTag: "Майстерність & Автор",
-    aboutTitle: "АЛЕНА ЗАБОЛОТНЯ",
+    aboutTag: "Craftsmanship & Creator",
+    aboutTitle: "ALENA ZABOLOTNIA",
     aboutFeats: [
       { icon: "fa-scissors", titleUA: "Тільки Ножиці, Фен та Гребінець", titleDE: "Nur Schere, Föhn und Kamm", titleEN: "Scissors, Hairdryer & Comb Only", descUA: "Бездоганна техніка ручного зрізу для природного падіння пасом.", descDE: "Klassische Scherenkunst ohne Maschinenschnitte.", descEN: "Meticulous technique for natural hair movement." },
       { icon: "fa-sliders", titleUA: "Персональна Адаптація", titleDE: "Individuelle Anpassung", titleEN: "Personal Adaptation", descUA: "Адаптую зачіску по формі обличчя та типом волосся.", descDE: "Perfekter Schnitt für einfache Pflege zu Hause.", descEN: "Engineered according to bone structure and hair fall." },
@@ -94,7 +94,7 @@ window.CLIENTS_DATABASE = {
     heroTitleEN: "EXPERT COIFFEUR <br><span class=\"hero-gold-text\">AIRTOUCH & BALAYAGE</span>",
     heroDescEN: "Exclusive Airtouch, Balayage color techniques and precision haircuts in Baden / Zürich, Switzerland.",
     cardBadgeTitle: "✨ Alexander Rein — Coiffeur Master",
-    cardBadgeText: "Спеціаліст з Airtouch, Balayage та топових стрижок у Бадені.",
+    cardBadgeText: "Airtouch, Balayage and top haircuts specialist in Baden.",
     stats: [
       { num: "Airtouch", labelUA: "Авторська Техніка", labelDE: "Spezialität", labelEN: "Signature Technique" },
       { num: "🇨🇭 Baden", labelUA: "Zürcherstrasse 10", labelDE: "Zürcherstrasse 10", labelEN: "Zürcherstrasse 10" },
@@ -117,7 +117,7 @@ window.CLIENTS_DATABASE = {
         { nameUA: "VIP Glossing & Scalp Therapy", nameDE: "VIP Glossing & Scalp Therapy", nameEN: "VIP Glossing & Scalp Therapy", price: "CHF 85", subUA: "Інтенсивне відновлення волосся та фірмова укладка", subDE: "Intensiv-Haarpflege & elegantes Styling", subEN: "Deep hair repair & signature blowdry styling" }
       ]
     },
-    aboutTag: "Майстерність & Досвід",
+    aboutTag: "Craftsmanship & Experience",
     aboutTitle: "ALEXANDER REIN",
     aboutFeats: [
       { icon: "fa-wand-magic-sparkles", titleUA: "Airtouch & Balayage Master", titleDE: "Airtouch & Balayage Spezialist", titleEN: "Airtouch & Balayage Master", descUA: "Ексклюзивні високі техніки фарбування з ідеальними розтяжками.", descDE: "Höchste Farbkompetenz für natürliche und langanhaltende Ergebnisse.", descEN: "Master-level hair coloring with seamless blends." },
@@ -158,7 +158,7 @@ window.CLIENTS_DATABASE = {
     heroTitleEN: "LUXURY BEAUTY <br><span class=\"hero-gold-text\">HAIR & COLOR GLOW</span>",
     heroDescEN: "Premier beauty and hair sanctuary on Bahnhofstrasse, Zürich. Luxury coloring, glow treatments & styling.",
     cardBadgeTitle: "✨ Glow Beauty Studio Zürich",
-    cardBadgeText: "Ексклюзивний салон краси на Bahnhofstrasse у Цюриху.",
+    cardBadgeText: "Exclusive beauty salon on Bahnhofstrasse in Zürich.",
     stats: [
       { num: "Zürich", labelUA: "Bahnhofstrasse 42", labelDE: "Bahnhofstrasse 42", labelEN: "Bahnhofstrasse 42" },
       { num: "VIP", labelUA: "Індивідуальні Кабінети", labelDE: "VIP Räume", labelEN: "VIP Suites" },
@@ -181,7 +181,7 @@ window.CLIENTS_DATABASE = {
         { nameUA: "Bridal & Event Makeup", nameDE: "Braut & Event Makeup", nameEN: "Bridal & Event Makeup", price: "CHF 150", subUA: "Професійний макіяж із стійкістю 24 години", subDE: "Professionelles Event-Make-up", subEN: "Professional long-lasting evening makeup" }
       ]
     },
-    aboutTag: "Про Нас",
+    aboutTag: "About Us",
     aboutTitle: "GLOW BEAUTY SALON",
     aboutFeats: [
       { icon: "fa-sparkles", titleUA: "Преміальні Матеріали", titleDE: "Premium Produkte", titleEN: "Luxury Products", descUA: "Працюємо виключно з преміальними європейськими брендами.", descDE: "Nutzung exklusiver internationaler Pflegelinien.", descEN: "Crafted with top-tier international hair care products." },
@@ -243,7 +243,7 @@ window.CLIENTS_DATABASE = {
         { nameUA: "Відновлення Волосся", nameDE: "Haarwiederherstellung", nameEN: "Hair Restoration", price: "CHF 90", subUA: "Глибокий SPA догляд", subDE: "Tiefenwirksame SPA Pflege", subEN: "Deep SPA hair care" }
       ]
     },
-    aboutTag: "Про Нас",
+    aboutTag: "About Us",
     aboutTitle: "4VISIONHUB",
     aboutFeats: [
       { icon: "fa-star", titleUA: "Висока Якість", titleDE: "Hohe Qualität", titleEN: "High Quality", descUA: "Безкомпромісний рівень сервісу.", descDE: "Kompromissloses Serviceniveau.", descEN: "Uncompromising level of service." }
