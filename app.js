@@ -1,6 +1,6 @@
 /* ==========================================================================
    MULTI-CLIENT PERSONALIZED DEMO ENGINE
-   Detects /client/:slug and renders custom client branding, colors & data
+   Supports /client/:slug AND ?client=:slug query parameters
    ========================================================================== */
 
 let activeClient = null;
@@ -9,10 +9,21 @@ let currentLang = 'ua';
 // 1. ROUTING & CLIENT CONFIG RESOLUTION
 function resolveActiveClient() {
   const path = window.location.pathname;
-  const match = path.match(/\/client\/([^\/]+)/);
+  const searchParams = new URLSearchParams(window.location.search);
+  
+  let slug = null;
 
-  if (match && match[1]) {
-    const slug = match[1].toLowerCase();
+  // Check path slug (/client/alexander-rein)
+  const pathMatch = path.match(/\/client\/([^\/]+)/);
+  if (pathMatch && pathMatch[1]) {
+    slug = pathMatch[1].toLowerCase();
+  } 
+  // Check query param (?client=alexander-rein)
+  else if (searchParams.has('client')) {
+    slug = searchParams.get('client').toLowerCase();
+  }
+
+  if (slug) {
     if (window.CLIENTS_DATABASE && window.CLIENTS_DATABASE[slug]) {
       activeClient = window.CLIENTS_DATABASE[slug];
     } else {
@@ -20,7 +31,7 @@ function resolveActiveClient() {
       return false;
     }
   } else {
-    // Default Root Client
+    // Default Root Client (Alena Zabolotnia)
     activeClient = window.CLIENTS_DATABASE["alena-zabolotnia"];
   }
 
@@ -345,7 +356,7 @@ function handleBookingSubmit(event) {
   const name = document.getElementById('modalName').value;
   const phone = document.getElementById('modalPhone').value;
 
-  const textMsg = `Hello ${activeClient ? activeClient.ownerName : 'Master'}! ✂️\n\nI would like to book a appointment:\n` +
+  const textMsg = `Hello ${activeClient ? activeClient.ownerName : 'Master'}! ✂️\n\nI would like to book a haircut appointment:\n` +
                   `👤 Name: ${name}\n` +
                   `💇 Service: ${service}\n` +
                   `📅 Date & Time: ${date} at ${time}\n` +
