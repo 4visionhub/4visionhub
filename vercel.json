@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "alena-zabolotnia-hair-artist",
   "cleanUrls": true,
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/assets/(.*)",
