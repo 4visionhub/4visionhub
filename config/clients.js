@@ -333,8 +333,8 @@ window.CLIENTS_DATABASE = {
     primaryColor: "#0f0f0f",
     accentColor: "#d8a9a9",
     accentColorLight: "#f4dada",
-    ownerPhoto: "assets/gallery_women.jpg",
-    heroBg: "assets/hero_bg.jpg",
+    ownerPhoto: "assets/laura_profile.jpg",
+    heroBg: "assets/laura_hero.jpg",
     heroBadgeTag: "LAURA LUX • GENÈVE 🇨🇭",
     heroTitleUA: "LUXURY <br><span class=\"hero-gold-text\">HAIR EXTENSIONS</span>",
     heroDescUA: "Premium hair extensions artist in Geneva.",
@@ -374,8 +374,8 @@ window.CLIENTS_DATABASE = {
       { icon: "fa-location-dot", titleEN: "Geneva Studio", descEN: "Exclusive and private hair extension services located in Genève." }
     ],
     gallery: [
-      { img: "assets/gallery_women.jpg", labelUA: "Extensions", labelDE: "Extensions", labelEN: "Lux Extensions" },
-      { img: "assets/hero_bg.jpg", labelUA: "Studio", labelDE: "Studio", labelEN: "Studio" }
+      { img: "assets/laura_gallery.jpg", labelEN: "Hair Extensions" },
+      { img: "assets/laura_profile.jpg", labelEN: "Laura Lux Studio" }
     ]
   }
 };
