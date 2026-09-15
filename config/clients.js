@@ -315,5 +315,67 @@ window.CLIENTS_DATABASE = {
       { img: "assets/gallery_men.jpg", labelUA: "Haircut", labelDE: "Haarschnitt", labelEN: "Haircut" },
       { img: "assets/hero_bg.jpg", labelUA: "Barbershop", labelDE: "Barbershop", labelEN: "Barbershop" }
     ]
+  },
+
+  "laura-lux-xtens": {
+    slug: "laura-lux-xtens",
+    businessName: "LAURA LUX",
+    ownerName: "Laura Lux",
+    titleTag: "LAURA LUX | Hair Extensions Artist • Geneva 🇨🇭",
+    logoSub: "HAIR EXTENSIONS ARTIST • GENÈVE 🇨🇭",
+    topTag: "✨ Hair Extensions Artist",
+    location: "Genève, Switzerland",
+    address: "Genève, Switzerland",
+    phone: "",
+    instagram: "https://www.instagram.com/laura_lux_xtens/",
+    instagramHandle: "@laura_lux_xtens",
+    threads: "",
+    primaryColor: "#0f0f0f",
+    accentColor: "#d8a9a9",
+    accentColorLight: "#f4dada",
+    ownerPhoto: "assets/gallery_women.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "LAURA LUX • GENÈVE 🇨🇭",
+    heroTitleUA: "LUXURY <br><span class=\"hero-gold-text\">HAIR EXTENSIONS</span>",
+    heroDescUA: "Premium hair extensions artist in Geneva.",
+    heroTitleDE: "LUXURY <br><span class=\"hero-gold-text\">HAIR EXTENSIONS</span>",
+    heroDescDE: "Premium hair extensions artist in Geneva.",
+    heroTitleEN: "LUXURY <br><span class=\"hero-gold-text\">HAIR EXTENSIONS</span>",
+    heroDescEN: "Premium hair extensions artist based in Geneva. Official Bellami and Tokio Inkarami partner.",
+    cardBadgeTitle: "✨ Laura Lux Xtens",
+    cardBadgeText: "Specialized in luxury hair extensions in Geneva.",
+    stats: [
+      { num: "Genève", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Bellami", labelUA: "Бренд", labelDE: "Marke", labelEN: "Brand Partner" },
+      { num: "Inkarami", labelUA: "Догляд", labelDE: "Pflege", labelEN: "Treatment" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "EXTENSIONS",
+      col1TitleDE: "EXTENSIONS",
+      col1TitleEN: "EXTENSIONS",
+      col1Items: [
+        { nameEN: "Bellami Extensions", price: "On Request", subEN: "Premium quality Bellami hair extensions installation" },
+        { nameEN: "Extensions Maintenance", price: "CHF 150", subEN: "Care and repositioning of your hair extensions" }
+      ],
+      col2TitleUA: "TREATMENTS",
+      col2TitleDE: "TREATMENTS",
+      col2TitleEN: "TREATMENTS & STYLING",
+      col2Items: [
+        { nameEN: "Tokio Inkarami Treatment", price: "CHF 120", subEN: "Deep repairing Japanese hair treatment" },
+        { nameEN: "Luxury Styling", price: "CHF 80", subEN: "Professional styling and seamless blending" }
+      ]
+    },
+    aboutTag: "Artist Profile",
+    aboutTitle: "LAURA LUX EXTENSIONS",
+    aboutFeats: [
+      { icon: "fa-wand-magic-sparkles", titleEN: "Extensions Master", descEN: "Specialized in luxurious Bellami hair extensions and seamless blending techniques." },
+      { icon: "fa-leaf", titleEN: "Tokio Inkarami", descEN: "Official specialist for the renowned Japanese deep hair repair treatment." },
+      { icon: "fa-location-dot", titleEN: "Geneva Studio", descEN: "Exclusive and private hair extension services located in Genève." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelUA: "Extensions", labelDE: "Extensions", labelEN: "Lux Extensions" },
+      { img: "assets/hero_bg.jpg", labelUA: "Studio", labelDE: "Studio", labelEN: "Studio" }
+    ]
   }
 };
