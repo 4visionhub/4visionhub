@@ -570,5 +570,69 @@ window.CLIENTS_DATABASE = {
       { img: "assets/hero_bg.jpg", labelEN: "Wimpern" },
       { img: "assets/owner_alena.jpg", labelEN: "Salon" }
     ]
+  },
+
+  "coiffeursalonsi": {
+    slug: "coiffeursalonsi",
+    businessName: "COIFFEUR SALON SI",
+    ownerName: "Salon Si",
+    titleTag: "COIFFEUR SALON SI | Geroldswil Zürich 🇨🇭",
+    logoSub: "FARBEXPERTIN & BALAYAGE",
+    topTag: "✨ Damen Haarschnitt & Farbexpertin",
+    location: "Geroldswil, Zürich",
+    address: "Limmattalstrasse 43, Geroldswil, Switzerland 8954",
+    phone: "",
+    instagram: "https://www.instagram.com/coiffeursalonsi/",
+    instagramHandle: "@coiffeursalonsi",
+    threads: "",
+    primaryColor: "#0f0a0a",
+    accentColor: "#d4af37",
+    accentColorLight: "#f4d068",
+    ownerPhoto: "assets/owner_alena.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "COIFFEUR SALON SI • ZÜRICH 🇨🇭",
+    heroTitleUA: "FARBEXPERTIN <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescUA: "Damen Haarschnitt. 20+ Jahre Erfahrung.",
+    heroTitleDE: "FARBEXPERTIN <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescDE: "Damen Haarschnitt. 20+ Jahre Erfahrung in Geroldswil.",
+    heroTitleEN: "FARBEXPERTIN <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescEN: "Women's Haircut. 20+ years experience in Geroldswil, Zürich.",
+    cardBadgeTitle: "✨ Salon Si",
+    cardBadgeText: "20+ Jahre Erfahrung.",
+    stats: [
+      { num: "Geroldswil", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "20+ Jahre", labelUA: "Досвід", labelDE: "Erfahrung", labelEN: "Experience" },
+      { num: "Balayage", labelUA: "Колір", labelDE: "Farbe", labelEN: "Color" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "HAARSCHNITT",
+      col1TitleDE: "HAARSCHNITT",
+      col1TitleEN: "HAIRCUT",
+      col1Items: [
+        { nameEN: "Damen Haarschnitt", price: "On Request", subEN: "Professional women's haircut" },
+        { nameEN: "Styling", price: "On Request", subEN: "Wash, blow-dry, and styling" }
+      ],
+      col2TitleUA: "FARBE & BALAYAGE",
+      col2TitleDE: "FARBE & BALAYAGE",
+      col2TitleEN: "COLOR & BALAYAGE",
+      col2Items: [
+        { nameEN: "Balayage", price: "On Request", subEN: "Custom balayage techniques" },
+        { nameEN: "Farbexpertin", price: "On Request", subEN: "Expert coloring services" }
+      ]
+    },
+    aboutTag: "Salon Profile",
+    aboutTitle: "COIFFEUR SALON SI",
+    aboutFeats: [
+      { icon: "fa-star", titleEN: "20+ Jahre Erfahrung", descEN: "Over 20 years of professional hairdressing experience." },
+      { icon: "fa-clock", titleEN: "Öffnungszeiten", descEN: "Mon - Frei: 9h-19h | Sam: 9h-18h." },
+      { icon: "fa-location-dot", titleEN: "Geroldswil | Zürich", descEN: "Limmattalstrasse 43, Geroldswil, Switzerland 8954." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelEN: "Haarschnitt" },
+      { img: "assets/gallery_men.jpg", labelEN: "Balayage" },
+      { img: "assets/hero_bg.jpg", labelEN: "Farbe" },
+      { img: "assets/owner_alena.jpg", labelEN: "Salon" }
+    ]
   }
 };
