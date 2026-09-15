@@ -440,7 +440,7 @@ window.CLIENTS_DATABASE = {
     gallery: [
       { img: "assets/img2.PNG", labelEN: "Locks" },
       { img: "assets/new_dreads.png", labelEN: "Locks Twists" },
-      { img: "assets/img5.jpg", labelEN: "Locks" }
+      { img: "assets/img4.PNG", labelEN: "Locks" }
     ]
   }
 };
