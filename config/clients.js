@@ -293,19 +293,23 @@ window.CLIENTS_DATABASE = {
       col1TitleDE: "HAARSCHNITTE",
       col1TitleEN: "HAIRCUTS",
       col1Items: [
-        { nameUA: "Classic Haircut", nameDE: "Klassischer Haarschnitt", nameEN: "Classic Haircut", price: "CHF 40", subUA: "Професійна чоловіча стрижка", subDE: "Professioneller Herrenhaarschnitt", subEN: "Professional men's haircut" }
+        { nameEN: "Classic Haircut", price: "CHF 40", subEN: "Professional men's haircut tailored to your face shape" },
+        { nameEN: "Fade Haircut", price: "CHF 45", subEN: "Clean and precise skin fade with styling" }
       ],
       col2TitleUA: "ДОГЛЯД ЗА БОРОДОЮ",
       col2TitleDE: "BARTPFLEGE",
       col2TitleEN: "BEARD CARE",
       col2Items: [
-        { nameUA: "Beard Trim & Styling", nameDE: "Bart trimmen & stylen", nameEN: "Beard Trim & Styling", price: "CHF 30", subUA: "Моделювання бороди", subDE: "Bartmodellierung", subEN: "Beard shaping and styling" }
+        { nameEN: "Beard Trim & Styling", price: "CHF 30", subEN: "Beard shaping, line-up, and nourishing oil treatment" },
+        { nameEN: "Hot Towel Shave", price: "CHF 35", subEN: "Traditional clean shave with hot towel relaxation" }
       ]
     },
     aboutTag: "About Us",
     aboutTitle: "LEO BARBER",
     aboutFeats: [
-      { icon: "fa-scissors", titleUA: "Професійний Барбер", titleDE: "Professioneller Barber", titleEN: "Professional Barber", descUA: "Індивідуальний підхід до кожного клієнта.", descDE: "Individuelle Betreuung für jeden Kunden.", descEN: "Individual approach for every client." }
+      { icon: "fa-scissors", titleEN: "Professional Barber", descEN: "Expert precision in classic and modern men's hairstyles." },
+      { icon: "fa-star", titleEN: "Premium Experience", descEN: "Relaxing atmosphere with top-tier grooming products." },
+      { icon: "fa-location-dot", titleEN: "Geneva Location", descEN: "Conveniently located at Rue des Pâquis 23, 1201 Geneva." }
     ],
     gallery: [
       { img: "assets/gallery_men.jpg", labelUA: "Haircut", labelDE: "Haarschnitt", labelEN: "Haircut" },
