@@ -443,5 +443,68 @@ window.CLIENTS_DATABASE = {
       { img: "assets/img4.PNG", labelEN: "Locks" },
       { img: "assets/img6.PNG", labelEN: "Locks" }
     ]
+  },
+
+  "hairbeauty-by-taty": {
+    slug: "hairbeauty-by-taty",
+    businessName: "HAIRBEAUTY BY TATY",
+    ownerName: "Taty",
+    titleTag: "HAIRBEAUTY BY TATY | Coiffure Lausanne 🇨🇭",
+    logoSub: "COIFFURE & BEAUTÉ • LAUSANNE 🇨🇭",
+    topTag: "✨ Spécialiste balayage & coloration",
+    location: "Lausanne, Switzerland",
+    address: "Lausanne, Switzerland",
+    phone: "",
+    instagram: "https://www.instagram.com/hairbeauty_by_taty/",
+    instagramHandle: "@hairbeauty_by_taty",
+    threads: "",
+    primaryColor: "#0f0f0f",
+    accentColor: "#d4af37",
+    accentColorLight: "#f4d068",
+    ownerPhoto: "assets/owner_alena.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "HAIRBEAUTY BY TATY • LAUSANNE 🇨🇭",
+    heroTitleUA: "SPÉCIALISTE <br><span class=\"hero-gold-text\">BALAYAGE</span>",
+    heroDescUA: "Résultat sur mesure. Spécialiste balayage & coloration.",
+    heroTitleDE: "SPÉCIALISTE <br><span class=\"hero-gold-text\">BALAYAGE</span>",
+    heroDescDE: "Résultat sur mesure. Spécialiste balayage & coloration.",
+    heroTitleEN: "SPÉCIALISTE <br><span class=\"hero-gold-text\">BALAYAGE</span>",
+    heroDescEN: "Résultat sur mesure. Spécialiste balayage & coloration sur Lausanne.",
+    cardBadgeTitle: "✨ Hairbeauty by Taty",
+    cardBadgeText: "Spécialiste balayage & coloration.",
+    stats: [
+      { num: "Lausanne", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Expert", labelUA: "Balayage", labelDE: "Balayage", labelEN: "Balayage" },
+      { num: "100%", labelUA: "Coloration", labelDE: "Coloration", labelEN: "Coloration" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "COLORATION",
+      col1TitleDE: "COLORATION",
+      col1TitleEN: "COLORATION",
+      col1Items: [
+        { nameEN: "Balayage Expert", price: "On Request", subEN: "Custom balayage tailored to your style" },
+        { nameEN: "Coloration", price: "On Request", subEN: "Full professional coloring services" }
+      ],
+      col2TitleUA: "COIFFURE",
+      col2TitleDE: "COIFFURE",
+      col2TitleEN: "COIFFURE & BEAUTÉ",
+      col2Items: [
+        { nameEN: "Coupe sur mesure", price: "On Request", subEN: "Custom haircut and styling" },
+        { nameEN: "Brushing", price: "On Request", subEN: "Professional blowout and finishing" }
+      ]
+    },
+    aboutTag: "Artist Profile",
+    aboutTitle: "HAIRBEAUTY BY TATY",
+    aboutFeats: [
+      { icon: "fa-paintbrush", titleEN: "Spécialiste Balayage", descEN: "Expert techniques for seamless balayage and coloring." },
+      { icon: "fa-star", titleEN: "Résultat sur Mesure", descEN: "Custom beauty results tailored specifically for you." },
+      { icon: "fa-location-dot", titleEN: "Lausanne Studio", descEN: "Located in the heart of Lausanne." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelEN: "Balayage" },
+      { img: "assets/gallery_men.jpg", labelEN: "Coloration" },
+      { img: "assets/hero_bg.jpg", labelEN: "Coiffure" }
+    ]
   }
 };
