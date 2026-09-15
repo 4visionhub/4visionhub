@@ -379,5 +379,69 @@ window.CLIENTS_DATABASE = {
       { img: "assets/1 (2).jpg", labelEN: "Copper Waves" },
       { img: "assets/laura_gallery_4.jpg", labelEN: "Luxury Studio" }
     ]
+  },
+
+  "locks-ch": {
+    slug: "locks-ch",
+    businessName: "LOCKS.CH",
+    ownerName: "Locks Specialist",
+    titleTag: "LOCKS.CH | Spécialiste Locks • Lausanne 🇨🇭",
+    logoSub: "SPÉCIALISTE LOCKS • LAUSANNE 🇨🇭",
+    topTag: "🔒 Spécialiste locks – Dispo 24h/24 7j/7",
+    location: "Lausanne, Switzerland",
+    address: "Lausanne, Switzerland",
+    phone: "",
+    instagram: "https://www.instagram.com/locks.ch/",
+    instagramHandle: "@locks.ch",
+    threads: "",
+    primaryColor: "#0a0a0a",
+    accentColor: "#d4af37",
+    accentColorLight: "#f4d068",
+    ownerPhoto: "assets/gallery_men.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "LOCKS.CH • LAUSANNE 🇨🇭",
+    heroTitleUA: "SPÉCIALISTE <br><span class=\"hero-gold-text\">LOCKS</span>",
+    heroDescUA: "Départs, reprises, twists, crochet.",
+    heroTitleDE: "SPÉCIALISTE <br><span class=\"hero-gold-text\">LOCKS</span>",
+    heroDescDE: "Départs, reprises, twists, crochet.",
+    heroTitleEN: "SPÉCIALISTE <br><span class=\"hero-gold-text\">LOCKS</span>",
+    heroDescEN: "Départs, reprises, twists, crochet. Tous types de cheveux. Déplacement possible.",
+    cardBadgeTitle: "🔒 Locks.ch",
+    cardBadgeText: "Spécialiste locks sur Lausanne.",
+    stats: [
+      { num: "Lausanne", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "24/7", labelUA: "Dispo", labelDE: "Dispo", labelEN: "Available" },
+      { num: "100%", labelUA: "Crochet", labelDE: "Crochet", labelEN: "Crochet" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "DÉPARTS & REPRISES",
+      col1TitleDE: "DÉPARTS & REPRISES",
+      col1TitleEN: "DÉPARTS & REPRISES",
+      col1Items: [
+        { nameEN: "Départs de Locks", price: "On Request", subEN: "Starting dreadlocks for all hair types" },
+        { nameEN: "Reprises", price: "On Request", subEN: "Root maintenance and retwisting" }
+      ],
+      col2TitleUA: "TWISTS & CROCHET",
+      col2TitleDE: "TWISTS & CROCHET",
+      col2TitleEN: "TWISTS & CROCHET",
+      col2Items: [
+        { nameEN: "Twists", price: "On Request", subEN: "Professional twist styling" },
+        { nameEN: "Crochet", price: "On Request", subEN: "Instant locs and maintenance using crochet method" }
+      ]
+    },
+    aboutTag: "Artist Profile",
+    aboutTitle: "LOCKS.CH LAUSANNE",
+    aboutFeats: [
+      { icon: "fa-lock", titleEN: "Spécialiste Locks", descEN: "Expert in starting and maintaining dreadlocks for all hair types." },
+      { icon: "fa-clock", titleEN: "Dispo 24h/24 7j/7", descEN: "Available around the clock for appointments." },
+      { icon: "fa-car", titleEN: "Déplacement Possible", descEN: "Mobile services available upon request." }
+    ],
+    gallery: [
+      { img: "assets/gallery_men.jpg", labelEN: "Locks" },
+      { img: "assets/hero_bg.jpg", labelEN: "Locks" },
+      { img: "assets/gallery_women.jpg", labelEN: "Locks" },
+      { img: "assets/hero_bg.jpg", labelEN: "Locks" }
+    ]
   }
 };

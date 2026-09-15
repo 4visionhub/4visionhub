@@ -224,6 +224,7 @@ function renderClientNotFound(slug) {
         <h3 style="font-size:0.9rem; text-transform:uppercase; letter-spacing:2px; color:#d4af37; margin-bottom:1rem;">Available Client Demos:</h3>
         <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
           <li><a href="/client/coiffeur-leo" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">💈 Leo Barber (Geneva)</a></li>
+          <li><a href="/client/locks-ch" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">🔒 Locks.ch (Lausanne)</a></li>
           <li><a href="/client/laura-lux" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✨ Laura Lux Extensions (Geneva)</a></li>
           <li><a href="/client/alena-zabolotnia" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✂️ Alena Zabolotnia (Kanton Bern)</a></li>
           <li><a href="/client/alexander-rein" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✨ Alexander Rein (Baden / Zürich)</a></li>
