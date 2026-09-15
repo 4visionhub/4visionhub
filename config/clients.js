@@ -507,5 +507,68 @@ window.CLIENTS_DATABASE = {
       { img: "assets/hero_bg.jpg", labelEN: "Coiffure" },
       { img: "assets/owner_alena.jpg", labelEN: "Style" }
     ]
+  },
+
+  "beautyelasalonwinterthur": {
+    slug: "beautyelasalonwinterthur",
+    businessName: "BEAUTY ELA SALON",
+    ownerName: "Ela",
+    titleTag: "BEAUTY ELA SALON | Schweiz 🇨🇭",
+    logoSub: "SALON • WINTERTHUR 🇨🇭",
+    topTag: "✨ Wimpern & Haare Extensions",
+    location: "Winterthur, Switzerland",
+    address: "Winterthur, Switzerland",
+    phone: "076 529 35 09",
+    instagram: "https://www.instagram.com/beautyelasalonwinterthur/",
+    instagramHandle: "@beautyelasalonwinterthur",
+    threads: "",
+    primaryColor: "#0f0a0a",
+    accentColor: "#d4af37",
+    accentColorLight: "#f4d068",
+    ownerPhoto: "assets/owner_alena.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "BEAUTY ELA SALON • WINTERTHUR 🇨🇭",
+    heroTitleUA: "BEAUTY <br><span class=\"hero-gold-text\">ELA SALON</span>",
+    heroDescUA: "Wimpern, Brasil haare & Extensions.",
+    heroTitleDE: "BEAUTY <br><span class=\"hero-gold-text\">ELA SALON</span>",
+    heroDescDE: "Wimpern, Brasil haare & Extensions in Winterthur.",
+    heroTitleEN: "BEAUTY <br><span class=\"hero-gold-text\">ELA SALON</span>",
+    heroDescEN: "Wimpern, Brasil haare & Extensions in Winterthur.",
+    cardBadgeTitle: "✨ Beauty Ela Salon",
+    cardBadgeText: "Termin per WhatsApp: 076 529 35 09",
+    stats: [
+      { num: "Winterthur", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Wimpern", labelUA: "Вії", labelDE: "Wimpern", labelEN: "Lashes" },
+      { num: "Extensions", labelUA: "Волосся", labelDE: "Haare", labelEN: "Hair" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "WIMPERN",
+      col1TitleDE: "WIMPERN",
+      col1TitleEN: "WIMPERN",
+      col1Items: [
+        { nameEN: "Wimpern", price: "50 CHF", subEN: "Professional eyelash services" }
+      ],
+      col2TitleUA: "HAARE EXTENSIONS",
+      col2TitleDE: "HAARE EXTENSIONS",
+      col2TitleEN: "HAARE EXTENSIONS",
+      col2Items: [
+        { nameEN: "Brasil Haare", price: "200 CHF", subEN: "Premium Brazilian hair extensions" },
+        { nameEN: "Haare Extensions", price: "On Request", subEN: "Custom hair extensions" }
+      ]
+    },
+    aboutTag: "Salon Profile",
+    aboutTitle: "BEAUTY ELA SALON",
+    aboutFeats: [
+      { icon: "fa-eye", titleEN: "Wimpern", descEN: "Professional lash services starting at 50 CHF." },
+      { icon: "fa-scissors", titleEN: "Haare Extensions", descEN: "Premium Brazilian hair (200 CHF) and custom extensions." },
+      { icon: "fa-phone", titleEN: "Termin per WhatsApp", descEN: "Book easily via WhatsApp at 076 529 35 09." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelEN: "Extensions" },
+      { img: "assets/gallery_men.jpg", labelEN: "Brasil Haare" },
+      { img: "assets/hero_bg.jpg", labelEN: "Wimpern" },
+      { img: "assets/owner_alena.jpg", labelEN: "Salon" }
+    ]
   }
 };
