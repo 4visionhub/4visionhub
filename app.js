@@ -74,8 +74,8 @@ function resolveActiveClient() {
       return false;
     }
   } else {
-    // Default Root Client (Alena Zabolotnia)
-    activeClient = window.CLIENTS_DATABASE["alena-zabolotnia"];
+    // Default Root Client (Leo Barber)
+    activeClient = window.CLIENTS_DATABASE["coiffeur-leo"];
   }
 
   applyClientTheme();
