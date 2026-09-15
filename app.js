@@ -177,16 +177,16 @@ function renderClientContent() {
   }
 
   // Gallery Cards
-  const galleryContainer = document.querySelector('.gallery-grid');
-  if (galleryContainer && activeClient.gallery) {
-    galleryContainer.innerHTML = activeClient.gallery.map((g, idx) => {
-      const delay = idx * 100;
+  const galleryGrid = document.querySelector('.gallery-cards-grid');
+  if (galleryGrid && activeClient.gallery) {
+    galleryGrid.innerHTML = activeClient.gallery.map(g => {
       let lbl = g.labelEN;
       return `
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="${delay}">
-          <img src="${fixImg(g.img)}" alt="${lbl}" class="gallery-img">
-          <div class="gallery-overlay">
-            <span class="gallery-overlay-text">${lbl}</span>
+        <div class="gallery-card-item" onclick="openLightbox('${fixImg(g.img)}', '${lbl}')">
+          <img src="${fixImg(g.img)}" alt="${lbl}">
+          <div class="gallery-card-hover">
+            <div class="gallery-card-label">${lbl}</div>
+            <span style="font-size:0.8rem; color:#fff;">Click to view</span>
           </div>
         </div>
       `;
