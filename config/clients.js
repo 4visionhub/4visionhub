@@ -374,8 +374,9 @@ window.CLIENTS_DATABASE = {
       { icon: "fa-location-dot", titleEN: "Geneva Studio", descEN: "Exclusive and private hair extension services located in Genève." }
     ],
     gallery: [
-      { img: "assets/laura_gallery.jpg", labelEN: "Hair Extensions" },
-      { img: "assets/laura_profile.jpg", labelEN: "Laura Lux Studio" }
+      { img: "assets/laura_gallery_1.jpg", labelEN: "Split Tone Extensions" },
+      { img: "assets/laura_gallery_2.jpg", labelEN: "Vibrant Red" },
+      { img: "assets/laura_gallery_3.jpg", labelEN: "Copper Waves" }
     ]
   }
 };
