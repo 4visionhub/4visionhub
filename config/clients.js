@@ -317,8 +317,8 @@ window.CLIENTS_DATABASE = {
     ]
   },
 
-  "laura-lux-xtens": {
-    slug: "laura-lux-xtens",
+  "laura-lux": {
+    slug: "laura-lux",
     businessName: "LAURA LUX",
     ownerName: "Laura Lux",
     titleTag: "LAURA LUX | Hair Extensions Artist • Geneva 🇨🇭",
