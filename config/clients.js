@@ -397,8 +397,8 @@ window.CLIENTS_DATABASE = {
     primaryColor: "#0a0a0a",
     accentColor: "#d4af37",
     accentColorLight: "#f4d068",
-    ownerPhoto: "assets/img1.PNG",
-    heroBg: "assets/img2.PNG",
+    ownerPhoto: "assets/new_owner.png",
+    heroBg: "assets/new_owner.png",
     heroBadgeTag: "LOCKS.CH • LAUSANNE 🇨🇭",
     heroTitleUA: "SPÉCIALISTE <br><span class=\"hero-gold-text\">LOCKS</span>",
     heroDescUA: "Départs, reprises, twists, crochet.",
@@ -439,9 +439,9 @@ window.CLIENTS_DATABASE = {
     ],
     gallery: [
       { img: "assets/img2.PNG", labelEN: "Locks" },
-      { img: "assets/img3.PNG", labelEN: "Locks" },
+      { img: "assets/new_dreads.png", labelEN: "Locks Twists" },
       { img: "assets/img4.PNG", labelEN: "Locks" },
-      { img: "assets/img1.PNG", labelEN: "Artist" }
+      { img: "assets/new_owner.png", labelEN: "Artist" }
     ]
   }
 };
