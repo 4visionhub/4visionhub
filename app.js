@@ -223,6 +223,8 @@ function renderClientNotFound(slug) {
       <div style="background:#13161f; border:1px solid rgba(212,175,55,0.3); border-radius:8px; padding:1.5rem; max-width:450px; width:100%; margin-bottom:2rem;">
         <h3 style="font-size:0.9rem; text-transform:uppercase; letter-spacing:2px; color:#d4af37; margin-bottom:1rem;">Available Client Demos:</h3>
         <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+          <li><a href="/client/coiffeur-leo" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">💈 Leo Barber (Geneva)</a></li>
+          <li><a href="/client/laura-lux-xtens" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✨ Laura Lux Extensions (Geneva)</a></li>
           <li><a href="/client/alena-zabolotnia" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✂️ Alena Zabolotnia (Kanton Bern)</a></li>
           <li><a href="/client/alexander-rein" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">✨ Alexander Rein (Baden / Zürich)</a></li>
           <li><a href="/client/glow-salon" style="color:#fff; font-weight:600; text-decoration:none; display:block; padding:0.6rem; background:rgba(255,255,255,0.04); border-radius:4px;">🌟 Glow Beauty Salon (Zürich)</a></li>
