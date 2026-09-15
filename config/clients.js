@@ -634,5 +634,69 @@ window.CLIENTS_DATABASE = {
       { img: "assets/hero_bg.jpg", labelEN: "Farbe" },
       { img: "assets/owner_alena.jpg", labelEN: "Salon" }
     ]
+  },
+
+  "classiccut-jelena": {
+    slug: "classiccut-jelena",
+    businessName: "KAMEHA HAIR JELENA",
+    ownerName: "Jelena",
+    titleTag: "KAMEHA HAIR JELENA | Zürich 🇨🇭",
+    logoSub: "HAIRCUT & COLOR SPECIALIST",
+    topTag: "✨ Master in Stufenschnitt & Precision Cuts",
+    location: "Zürich, Switzerland",
+    address: "Dufaux-Strasse 1, Zürich",
+    phone: "",
+    instagram: "https://www.instagram.com/classiccut.jelena/",
+    instagramHandle: "@classiccut.jelena",
+    threads: "",
+    primaryColor: "#0f0a0a",
+    accentColor: "#d4af37",
+    accentColorLight: "#f4d068",
+    ownerPhoto: "assets/owner_alena.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "KAMEHA HAIR JELENA • ZÜRICH 🇨🇭",
+    heroTitleUA: "STUFENSCHNITT <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescUA: "Precision cuts, blonde, & extensions.",
+    heroTitleDE: "STUFENSCHNITT <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescDE: "Precision cuts, blonde, balayage & extensions in Zürich.",
+    heroTitleEN: "PRECISION CUTS <br><span class=\"hero-gold-text\">& BALAYAGE</span>",
+    heroDescEN: "Master in Stufenschnitt, blonde, balayage & extensions in Zürich.",
+    cardBadgeTitle: "✨ Kameha Hair Jelena",
+    cardBadgeText: "Termin per DM",
+    stats: [
+      { num: "Zürich", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Precision", labelUA: "Стрижка", labelDE: "Schnitt", labelEN: "Cuts" },
+      { num: "Balayage", labelUA: "Колір", labelDE: "Farbe", labelEN: "Color" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "HAIRCUT",
+      col1TitleDE: "HAIRCUT",
+      col1TitleEN: "HAIRCUT",
+      col1Items: [
+        { nameEN: "Stufenschnitt", price: "On Request", subEN: "Master precision layered cuts" },
+        { nameEN: "Precision Cuts", price: "On Request", subEN: "Expert tailored haircuts" }
+      ],
+      col2TitleUA: "COLOR & EXTENSIONS",
+      col2TitleDE: "COLOR & EXTENSIONS",
+      col2TitleEN: "COLOR & EXTENSIONS",
+      col2Items: [
+        { nameEN: "Blonde & Balayage", price: "On Request", subEN: "Specialized blonde and balayage techniques" },
+        { nameEN: "Extensions", price: "On Request", subEN: "Premium hair extensions" }
+      ]
+    },
+    aboutTag: "Salon Profile",
+    aboutTitle: "KAMEHA HAIR ZÜRICH JELENA",
+    aboutFeats: [
+      { icon: "fa-scissors", titleEN: "Haircut Specialist", descEN: "Master in Stufenschnitt and precision cuts." },
+      { icon: "fa-paintbrush", titleEN: "Color & Blonde", descEN: "Expert in blonde, balayage, and coloration." },
+      { icon: "fa-location-dot", titleEN: "Zürich Location", descEN: "Located at Dufaux-Strasse 1, Zürich." }
+    ],
+    gallery: [
+      { img: "assets/gallery_women.jpg", labelEN: "Stufenschnitt" },
+      { img: "assets/gallery_men.jpg", labelEN: "Balayage" },
+      { img: "assets/hero_bg.jpg", labelEN: "Blonde" },
+      { img: "assets/owner_alena.jpg", labelEN: "Extensions" }
+    ]
   }
 };
