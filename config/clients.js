@@ -253,5 +253,63 @@ window.CLIENTS_DATABASE = {
       { img: "assets/hero_bg.jpg", labelUA: "Атмосфера", labelDE: "Atmosphäre", labelEN: "Atmosphere" },
       { img: "assets/gallery_men.jpg", labelUA: "Чоловічий Стиль", labelDE: "Herren Stil", labelEN: "Men's Style" }
     ]
+  },
+
+  "coiffeur-leo": {
+    slug: "coiffeur-leo",
+    businessName: "LEO BARBER",
+    ownerName: "Leo Barber",
+    titleTag: "LEO BARBER | Professional Barber • Geneva 🇨🇭",
+    logoSub: "BARBER • GENEVA 🇨🇭",
+    topTag: "✂️ Hair style professionnel Barber",
+    location: "Rue des Pâquis 23, 1201 Geneva",
+    address: "Rue des Pâquis 23, Geneva, Switzerland 1201",
+    phone: "",
+    instagram: "https://www.instagram.com/coiffeur_leo_geneve/",
+    instagramHandle: "@coiffeur_leo_geneve",
+    threads: "",
+    primaryColor: "#050505",
+    accentColor: "#a37c4d",
+    accentColorLight: "#cbb493",
+    ownerPhoto: "assets/gallery_men.jpg",
+    heroBg: "assets/hero_bg.jpg",
+    heroBadgeTag: "LEO BARBER • GENEVA 🇨🇭",
+    heroTitleUA: "PROFESSIONAL <br><span class=\"hero-gold-text\">HAIRSTYLE BARBER</span>",
+    heroDescUA: "AVEC ou SANS RDV. Професійні чоловічі стрижки у Женеві.",
+    heroTitleDE: "PROFESSIONAL <br><span class=\"hero-gold-text\">HAIRSTYLE BARBER</span>",
+    heroDescDE: "AVEC ou SANS RDV. Professionelle Herrenhaarschnitte in Genf.",
+    heroTitleEN: "PROFESSIONAL <br><span class=\"hero-gold-text\">HAIRSTYLE BARBER</span>",
+    heroDescEN: "AVEC ou SANS RDV. Professional men's haircuts and beard styling in Geneva.",
+    cardBadgeTitle: "✂️ Leo Barber",
+    cardBadgeText: "Professional Hair style Barber in Geneva.",
+    stats: [
+      { num: "Geneva", labelUA: "Локація", labelDE: "Standort", labelEN: "Location" },
+      { num: "Barber", labelUA: "Спеціалізація", labelDE: "Spezialität", labelEN: "Specialty" },
+      { num: "100%", labelUA: "Стиль", labelDE: "Stil", labelEN: "Style" },
+      { num: "5.0 ★", labelUA: "Відгуки", labelDE: "Bewertung", labelEN: "Reviews" }
+    ],
+    services: {
+      col1TitleUA: "СТРИЖКИ",
+      col1TitleDE: "HAARSCHNITTE",
+      col1TitleEN: "HAIRCUTS",
+      col1Items: [
+        { nameUA: "Classic Haircut", nameDE: "Klassischer Haarschnitt", nameEN: "Classic Haircut", price: "CHF 40", subUA: "Професійна чоловіча стрижка", subDE: "Professioneller Herrenhaarschnitt", subEN: "Professional men's haircut" }
+      ],
+      col2TitleUA: "ДОГЛЯД ЗА БОРОДОЮ",
+      col2TitleDE: "BARTPFLEGE",
+      col2TitleEN: "BEARD CARE",
+      col2Items: [
+        { nameUA: "Beard Trim & Styling", nameDE: "Bart trimmen & stylen", nameEN: "Beard Trim & Styling", price: "CHF 30", subUA: "Моделювання бороди", subDE: "Bartmodellierung", subEN: "Beard shaping and styling" }
+      ]
+    },
+    aboutTag: "About Us",
+    aboutTitle: "LEO BARBER",
+    aboutFeats: [
+      { icon: "fa-scissors", titleUA: "Професійний Барбер", titleDE: "Professioneller Barber", titleEN: "Professional Barber", descUA: "Індивідуальний підхід до кожного клієнта.", descDE: "Individuelle Betreuung für jeden Kunden.", descEN: "Individual approach for every client." }
+    ],
+    gallery: [
+      { img: "assets/gallery_men.jpg", labelUA: "Haircut", labelDE: "Haarschnitt", labelEN: "Haircut" },
+      { img: "assets/hero_bg.jpg", labelUA: "Barbershop", labelDE: "Barbershop", labelEN: "Barbershop" }
+    ]
   }
 };
