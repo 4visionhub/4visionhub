@@ -504,7 +504,8 @@ window.CLIENTS_DATABASE = {
     gallery: [
       { img: "assets/gallery_women.jpg", labelEN: "Balayage" },
       { img: "assets/gallery_men.jpg", labelEN: "Coloration" },
-      { img: "assets/hero_bg.jpg", labelEN: "Coiffure" }
+      { img: "assets/hero_bg.jpg", labelEN: "Coiffure" },
+      { img: "assets/owner_alena.jpg", labelEN: "Style" }
     ]
   }
 };
