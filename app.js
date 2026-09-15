@@ -94,8 +94,10 @@ function renderClientContent() {
   // Social Header Links
   const igHeaderLink = document.querySelector('.social-header-link[title="Instagram"]');
   const threadsHeaderLink = document.querySelector('.social-header-link[title="Threads"]');
+  const igHeroLink = document.querySelector('.btn-hero-secondary[title="Instagram"]');
   if (igHeaderLink) igHeaderLink.href = activeClient.instagram;
   if (threadsHeaderLink) threadsHeaderLink.href = activeClient.threads;
+  if (igHeroLink) igHeroLink.href = activeClient.instagram;
 
   // Hero Section
   const heroBadgeTag = document.querySelector('[data-i18n="heroBadgeTag"]');
