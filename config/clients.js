@@ -376,7 +376,8 @@ window.CLIENTS_DATABASE = {
     gallery: [
       { img: "assets/laura_gallery_1.jpg", labelEN: "Split Tone Extensions" },
       { img: "assets/laura_gallery_2.jpg", labelEN: "Vibrant Red" },
-      { img: "assets/laura_gallery_3.jpg", labelEN: "Copper Waves" }
+      { img: "assets/laura_gallery_3.jpg", labelEN: "Copper Waves" },
+      { img: "assets/laura_gallery_4.jpg", labelEN: "Luxury Studio" }
     ]
   }
 };
