@@ -8,26 +8,6 @@ let currentLang = 'en';
 const fixImg = (src) => src ? (src.startsWith('/') || src.startsWith('http') ? src : '/' + src) : '';
 
 const uiTranslations = {
-  ua: {
-    navHome: "Головна", navServices: "Меню та Ціни", navAbout: "Про Майстра", navGallery: "Галерея", navContact: "Контакти",
-    btnBook: "Записатися", btnBookHero: "Записатися Зараз", btnServicesHero: "Прейскурант",
-    stat1: "Ручні Ножиці", stat2: "Kanton Bern", stat3: "Персональний Прийом", stat4: "Client Rating",
-    menuTag: "Прейскурант Послуг", menuTitle: "МЕНЮ ТА ВАРТІСТЬ (CHF)", btnBookMenu: "Забронювати Час",
-    galTag: "Портфоліо", galTitle: "ГАЛЕРЕЯ РОБІТ", clickExpand: "Натисніть для перегляду",
-    footerLoc: "Friseur & Hair Artist • Schweiz 🇨🇭 (Kanton Bern)", btnBookFooter: "Записатися Зараз",
-    modalTitle: "ЗАПИС НА СТРИЖКУ", lblService: "Послуга", lblDate: "Дата", lblTime: "Час",
-    lblName: "Ваше Ім'я", lblPhone: "Телефон / WhatsApp", btnSubmit: "ПІДТВЕРДИТИ ЗАПИС"
-  },
-  de: {
-    navHome: "Startseite", navServices: "Preise", navAbout: "Über uns", navGallery: "Galerie", navContact: "Kontakt",
-    btnBook: "Termin", btnBookHero: "Jetzt Buchen", btnServicesHero: "Preisliste",
-    stat1: "Handarbeit", stat2: "Kanton Bern", stat3: "Termine", stat4: "Kunden",
-    menuTag: "Preisliste", menuTitle: "MENÜ & PREISE (CHF)", btnBookMenu: "Termin buchen",
-    galTag: "Portfolio", galTitle: "GALERIE", clickExpand: "Klicken zum Vergrößern",
-    footerLoc: "Hair Artist • Schweiz 🇨🇭", btnBookFooter: "Jetzt Buchen",
-    modalTitle: "TERMIN BUCHEN", lblService: "Service", lblDate: "Datum", lblTime: "Zeit",
-    lblName: "Ihr Name", lblPhone: "Telefon / WhatsApp", btnSubmit: "BESTÄTIGEN"
-  },
   en: {
     navHome: "Home", navServices: "Prices", navAbout: "About", navGallery: "Gallery", navContact: "Contact",
     btnBook: "Book", btnBookHero: "Book Now", btnServicesHero: "Price List",
@@ -130,107 +110,49 @@ function renderClientContent() {
   if (cardBadgeTitle) cardBadgeTitle.innerText = activeClient.cardBadgeTitle;
   if (cardBadgeText) cardBadgeText.innerText = activeClient.cardBadgeText;
 
-  if (currentLang === 'de') {
-    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleDE;
-    if (heroDesc) heroDesc.innerText = activeClient.heroDescDE;
-  } else if (currentLang === 'en') {
-    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleEN;
-    if (heroDesc) heroDesc.innerText = activeClient.heroDescEN;
-  } else {
-    if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleUA;
-    if (heroDesc) heroDesc.innerText = activeClient.heroDescUA;
-  }
+  if (heroTitle) heroTitle.innerHTML = activeClient.heroTitleEN;
+  if (heroDesc) heroDesc.innerText = activeClient.heroDescEN;
 
   // Stats Strip
   const statsContainer = document.querySelector('.stats-grid-row');
   if (statsContainer && activeClient.stats) {
     statsContainer.innerHTML = activeClient.stats.map(st => {
-      let lbl = st.labelUA;
-      if (currentLang === 'de') lbl = st.labelDE;
-      if (currentLang === 'en') lbl = st.labelEN;
+      let lbl = st.labelEN;
       return `
-        <div>
-          <div class="stat-value-num">${st.num}</div>
-          <div class="stat-desc-lbl">${lbl}</div>
+        <div class="stat-box">
+          <h3 class="stat-number">${st.num}</h3>
+          <p class="stat-label">${lbl}</p>
         </div>
       `;
     }).join('');
   }
 
   // Price List Menu
+  const col1Title = document.querySelector('[data-i18n="col1Title"]');
+  const col2Title = document.querySelector('[data-i18n="col2Title"]');
+
   if (activeClient.services) {
-    const col1Title = document.querySelector('[data-i18n="col1Title"]');
-    const col2Title = document.querySelector('[data-i18n="col2Title"]');
+    if (col1Title) col1Title.innerText = activeClient.services.col1TitleEN;
+    if (col2Title) col2Title.innerText = activeClient.services.col2TitleEN;
 
-    if (col1Title) {
-      let c1 = activeClient.services.col1TitleUA;
-      if (currentLang === 'de') c1 = activeClient.services.col1TitleDE;
-      if (currentLang === 'en') c1 = activeClient.services.col1TitleEN;
-      col1Title.innerText = c1;
-    }
+    const items = activeClient.services.col1Items.concat(activeClient.services.col2Items || []);
+    items.forEach((svc, index) => {
+      const idx = index + 1;
+      const nameEl = document.querySelector(`[data-i18n="item${idx}Name"]`);
+      const subEl = document.querySelector(`[data-i18n="item${idx}Sub"]`);
+      const priceEl = document.querySelector(`[data-i18n="item${idx}Name"]`)?.nextElementSibling?.nextElementSibling;
 
-    if (col2Title) {
-      let c2 = activeClient.services.col2TitleUA;
-      if (currentLang === 'de') c2 = activeClient.services.col2TitleDE;
-      if (currentLang === 'en') c2 = activeClient.services.col2TitleEN;
-      col2Title.innerText = c2;
-    }
-
-    // Populate Column 1 Items
-    const col1Container = document.querySelector('.menu-columns-grid > div:first-child');
-    if (col1Container) {
-      const headerHtml = col1Container.querySelector('.menu-cat-title').outerHTML;
-      const itemsHtml = activeClient.services.col1Items.map(it => {
-        let name = it.nameUA;
-        let sub = it.subUA;
-        if (currentLang === 'de') { name = it.nameDE; sub = it.subDE; }
-        if (currentLang === 'en') { name = it.nameEN; sub = it.subEN; }
-        return `
-          <div class="menu-item-row">
-            <div class="menu-item-top">
-              <span class="menu-item-name">${name}</span>
-              <span class="menu-item-dots"></span>
-              <span class="menu-item-price">${it.price}</span>
-            </div>
-            <div class="menu-item-details">${sub}</div>
-          </div>
-        `;
-      }).join('');
-      col1Container.innerHTML = headerHtml + itemsHtml;
-    }
-
-    // Populate Column 2 Items
-    const col2Container = document.querySelector('.menu-columns-grid > div:last-child');
-    if (col2Container) {
-      const headerHtml = col2Container.querySelector('.menu-cat-title').outerHTML;
-      const itemsHtml = activeClient.services.col2Items.map(it => {
-        let name = it.nameUA;
-        let sub = it.subUA;
-        if (currentLang === 'de') { name = it.nameDE; sub = it.subDE; }
-        if (currentLang === 'en') { name = it.nameEN; sub = it.subEN; }
-        return `
-          <div class="menu-item-row">
-            <div class="menu-item-top">
-              <span class="menu-item-name">${name}</span>
-              <span class="menu-item-dots"></span>
-              <span class="menu-item-price">${it.price}</span>
-            </div>
-            <div class="menu-item-details">${sub}</div>
-          </div>
-        `;
-      }).join('');
-      col2Container.innerHTML = headerHtml + itemsHtml;
-    }
+      if (nameEl) nameEl.innerText = svc.nameEN;
+      if (subEl) subEl.innerText = svc.subEN;
+      if (priceEl && svc.price) priceEl.innerText = svc.price;
+    });
 
     // Modal Service Select Options
     const modalSelect = document.getElementById('modalServiceSelect');
     if (modalSelect) {
       const allServices = [...activeClient.services.col1Items, ...activeClient.services.col2Items];
       modalSelect.innerHTML = allServices.map(it => {
-        let name = it.nameUA;
-        if (currentLang === 'de') name = it.nameDE;
-        if (currentLang === 'en') name = it.nameEN;
-        return `<option value="${name}">${name} — ${it.price}</option>`;
+        return `<option value="${it.nameEN}">${it.nameEN} — ${it.price}</option>`;
       }).join('');
     }
   }
@@ -241,37 +163,30 @@ function renderClientContent() {
   if (aboutImg) aboutImg.src = fixImg(activeClient.ownerPhoto);
   if (aboutTitle) aboutTitle.innerText = activeClient.aboutTitle;
 
-  const aboutFeatsContainer = document.querySelector('.about-features-group');
-  if (aboutFeatsContainer && activeClient.aboutFeats) {
-    aboutFeatsContainer.innerHTML = activeClient.aboutFeats.map(af => {
-      let t = af.titleUA; let d = af.descUA;
-      if (currentLang === 'de') { t = af.titleDE; d = af.descDE; }
-      if (currentLang === 'en') { t = af.titleEN; d = af.descEN; }
-      return `
-        <div class="about-feat-item">
-          <div class="about-feat-icon"><i class="fa-solid ${af.icon}"></i></div>
-          <div>
-            <h3 class="about-feat-title">${t}</h3>
-            <p class="about-feat-desc">${d}</p>
-          </div>
-        </div>
-      `;
-    }).join('');
+  if (activeClient.aboutFeats) {
+    activeClient.aboutFeats.forEach((feat, index) => {
+      const idx = index + 1;
+      const headEl = document.querySelector(`[data-i18n="feat${idx}Header"]`);
+      const bodyEl = document.querySelector(`[data-i18n="feat${idx}Body"]`);
+      const iconEl = headEl?.closest('.about-feat-item')?.querySelector('.about-feat-icon i');
+
+      if (headEl) headEl.innerText = feat.titleEN;
+      if (bodyEl) bodyEl.innerText = feat.descEN;
+      if (iconEl && feat.icon) iconEl.className = `fa-solid ${feat.icon}`;
+    });
   }
 
   // Gallery Cards
-  const galleryGrid = document.querySelector('.gallery-cards-grid');
-  if (galleryGrid && activeClient.gallery) {
-    galleryGrid.innerHTML = activeClient.gallery.map(g => {
-      let lbl = g.labelUA;
-      if (currentLang === 'de') lbl = g.labelDE;
-      if (currentLang === 'en') lbl = g.labelEN;
+  const galleryContainer = document.querySelector('.gallery-grid');
+  if (galleryContainer && activeClient.gallery) {
+    galleryContainer.innerHTML = activeClient.gallery.map((g, idx) => {
+      const delay = idx * 100;
+      let lbl = g.labelEN;
       return `
-        <div class="gallery-card-item" onclick="openLightbox('${fixImg(g.img)}', '${lbl}')">
-          <img src="${fixImg(g.img)}" alt="${lbl}">
-          <div class="gallery-card-hover">
-            <div class="gallery-card-label">${lbl}</div>
-            <span style="font-size:0.8rem; color:#fff;">Click to view</span>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="${delay}">
+          <img src="${fixImg(g.img)}" alt="${lbl}" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">${lbl}</span>
           </div>
         </div>
       `;
